@@ -1,11 +1,11 @@
 [color]
 [core]
-	editor = C:/Program\\ Files/Sublime\\ Text\\ 2/sublime_text.exe -w
-	whitespace = trailing-space,space-before-tab
+    editor = C:/Program\\ Files/Sublime\\ Text\\ 2/sublime_text.exe -w
+    whitespace = trailing-space,space-before-tab
 [alias]
-	co = checkout
-	st = status
-	br = branch
-	hist = log --pretty=\"format:%C(blue)%h%C(red)%d%C(yellow) %s %C(green)%an%Creset, %ar\" --graph
+    co = checkout
+    st = status
+    br = branch
+    hist = log --pretty=\"format:%C(blue)%h%C(red)%d%C(yellow) %s %C(green)%an%Creset, %ar\" --graph
 [push]
-	default = upstream
+    default = simple

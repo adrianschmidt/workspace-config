@@ -1,4 +1,6 @@
 [color]
+    ui = always
+    diff = always
 [core]
     editor = C:/Program\\ Files/Sublime\\ Text\\ 2/sublime_text.exe -w
     whitespace = trailing-space,space-before-tab

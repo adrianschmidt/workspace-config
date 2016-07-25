@@ -1,13 +1,36 @@
+[push]
+    default = simple
+[alias]
+    br = branch
+    co = checkout
+    f = fetch
+    h = log --pretty=format:'%C(yellow)%h%Creset %cd | %s%C(yellow)%d%Creset %C(red)(%an, %cr)%Creset' --graph --date=short
+    hb = log --pretty=format:'%C(yellow)%h%Creset %cd | %s%C(yellow)%d%Creset %C(red)(%an, %cr)%Creset' --graph --date=short ad40478d1cac4b95c70c179befb02516f0e728ac..HEAD
+    hist = log --pretty=\"format:%C(blue)%h%C(red)%d%C(yellow) %s %C(green)%an%Creset, %ar\" --graph
+    ignored = !git ls-files -v | grep "^[[:lower:]]"
+    logu = log @{u}
+    massage = ! git stash  save --include-untracked 'autostash' && git rebase -i e4aeb4decc09b037c1ff6fba7aaf0705c9c4d31b && git stash pop
+    po = remote prune origin
+    pod = remote prune origin --dry-run
+    praise = blame
+    r = rebase
+    st = status
 [color]
     ui = always
     diff = always
+[ghfw]
+    disableverification = true
+[filter "hawser"]
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
+[filter "lfs"]
+    smudge = git-lfs smudge %f
+    required = true
+    clean = git-lfs clean %f
+[pull]
+    rebase = true
+[merge]
+    conflictstyle = diff3
 [core]
-    editor = C:/Program\\ Files/Sublime\\ Text\\ 2/sublime_text.exe -w
-    whitespace = trailing-space,space-before-tab
-[alias]
-    co = checkout
-    st = status
-    br = branch
-    hist = log --pretty=\"format:%C(blue)%h%C(red)%d%C(yellow) %s %C(green)%an%Creset, %ar\" --graph
-[push]
-    default = simple
+    autocrlf = input

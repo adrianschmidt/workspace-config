@@ -8,12 +8,11 @@
     hb = log --pretty=format:'%C(yellow)%h%Creset %cd | %s%C(yellow)%d%Creset %C(red)(%an, %cr)%Creset' --graph --date=short ad40478d1cac4b95c70c179befb02516f0e728ac..HEAD
     hist = log --pretty=\"format:%C(blue)%h%C(red)%d%C(yellow) %s %C(green)%an%Creset, %ar\" --graph
     ignored = !git ls-files -v | grep "^[[:lower:]]"
-    massage = ! git stash  save --include-untracked 'autostash' && git rebase -i e4aeb4decc09b037c1ff6fba7aaf0705c9c4d31b && git stash pop
     po = remote prune origin
     pod = remote prune origin --dry-run
     praise = blame
     r = rebase
-    st = status
+    s = status
     ulog = log @{u}
     pf = push --force-with-lease
     p = push
@@ -21,11 +20,7 @@
 [color]
     ui = always
     diff = always
-[ghfw]
-    disableverification = true
 [pull]
     rebase = true
 [merge]
     conflictstyle = diff3
-[core]
-    autocrlf = input

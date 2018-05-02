@@ -17,6 +17,7 @@
     pf = push --force-with-lease
     p = push
     cp = cherry-pick
+    rc = rebase --continue
 [color]
     ui = always
     diff = always

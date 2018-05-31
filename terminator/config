@@ -1,0 +1,72 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  suppress_multiple_term_dialog = True
+  title_font = CentSchbook Mono BT 9
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = cce3f27c-f23d-46b1-b792-bf74fc060f1e
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 1145:660
+      size = 1855, 1056
+      title = ads@d6mh45j: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 992
+      ratio = 0.536388140162
+      type = HPaned
+    [[[child3]]]
+      order = 1
+      parent = child1
+      position = 525
+      ratio = 0.5
+      type = VPaned
+    [[[child5]]]
+      order = 1
+      parent = child3
+      position = 259
+      ratio = 0.499047619048
+      type = VPaned
+    [[[terminal2]]]
+      directory = /home/ads/src/lime-webclient
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = cce3f27c-f23d-46b1-b792-bf74fc060f1e
+    [[[terminal4]]]
+      directory = /home/ads/src/lime-webclient
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = c03ccacd-0041-4f33-8777-6da978026fcd
+    [[[terminal6]]]
+      directory = /home/ads/src/lime-webclient
+      order = 0
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 411d51f1-862d-4e0b-b9ab-0ca4a357bdeb
+    [[[terminal7]]]
+      directory = /home/ads/src/lime-docker
+      order = 1
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 37a2f2b3-ea8c-4dca-be9d-34f817f9aba9
+[plugins]
+[profiles]
+  [[default]]
+    background_image = None
+    copy_on_selection = True
+    cursor_blink = False
+    font = CentSchbook Mono BT 10
+    scrollback_lines = 15000

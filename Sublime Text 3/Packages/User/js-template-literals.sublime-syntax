@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+name: JavaScript NG
+file_extensions:
+  - html.ts
+scope: source.js.ng
+contexts:
+  main:
+    - match: ""
+      push: scope:source.js
+      with_prototype:
+      - match: '`'
+        push:
+          - meta_content_scope: text.html.basic.embedded.js
+          - include: 'scope:text.html.basic'
+          - match: '`'
+            pop: true

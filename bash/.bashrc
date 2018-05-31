@@ -1,5 +1,3 @@
-alias subl='/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
-
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 

@@ -1,9 +1,11 @@
+[user]
+	name = Adrian Schmidt
+	email = adrian.schmidt@lime.tech
 [push]
     default = simple
 [alias]
     br = branch
     co = checkout
-    cm = commit
     f = fetch
     h = log --pretty=format:'%C(yellow)%h%Creset %cd | %s%C(yellow)%d%Creset %C(red)(%an, %cr)%Creset' --graph --date=short
     hb = log --pretty=format:'%C(yellow)%h%Creset %cd | %s%C(yellow)%d%Creset %C(red)(%an, %cr)%Creset' --graph --date=short ad40478d1cac4b95c70c179befb02516f0e728ac..HEAD
@@ -18,7 +20,8 @@
     pf = push --force-with-lease
     p = push
     cp = cherry-pick
-    rc = rebase --continue
+	cm = commit
+	rc = rebase --continue
 [color]
     ui = always
     diff = always

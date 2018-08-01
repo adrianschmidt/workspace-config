@@ -7,8 +7,13 @@
 	[
 		"DocBlockr",
 		"EditorConfig",
+		"JSX",
 		"LESS",
+		"MarkdownLivePreview",
+		"Monokai Extended",
 		"Package Control",
+		"Sass",
+		"TerminalView",
 		"TypeScript"
 	]
 }

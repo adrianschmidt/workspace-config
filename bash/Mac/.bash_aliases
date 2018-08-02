@@ -1,6 +1,6 @@
-alias ll='ls -alFh'
-alias la='ls -Ah'
-alias l='ls -CFh'
+alias ll='grc ls -alFh'
+alias la='grc ls -Ah'
+alias l='grc ls -CFh'
 
 alias d=docker
 alias dc=docker-compose

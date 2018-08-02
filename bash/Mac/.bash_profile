@@ -43,7 +43,7 @@ function parse_git_dirty {
         bits+="$(tput setaf 4)$(tput sgr0)"
     fi
     if [ "${diverged}" == "0" ]; then
-        bits+="$(tput setaf 4)$(tput sgr0)"
+        bits+="$(tput setaf 1)$(tput sgr0)"
     fi
     # if [ "${newfile}" == "0" ]; then
     #     bits="${bits}"

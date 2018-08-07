@@ -1,10 +1,13 @@
 {
+	"caret_style": "solid",
 	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
+	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
 		".git",
 		".stencil",
 		"dist",
+		"docz",
 		"node_modules",
 		"prebuild",
 		"www",

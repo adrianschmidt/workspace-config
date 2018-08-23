@@ -81,4 +81,4 @@ function pipinstall() {
 
 alias pipinstall=pipinstall
 
-alias npmOutdated="npm outdated --registry=$VERDACCIO"
+alias npmOutdated="npm outdated --registry=\"$VERDACCIO\""

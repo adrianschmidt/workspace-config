@@ -161,11 +161,18 @@ alias l='ls -CFh'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+# Tokens
+# Since this file is committed to github, absolutely no tokens or
+# other secrets can go in this file. Instead, they are added to a
+# separate file which is not tracked by git.
+if [ -f ~/.bash_secrets ]; then
+    . ~/.bash_secrets
+fi
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -197,77 +204,3 @@ function onetime() {
 #         echo 'Error: Did not find a onetime URL in the clipboard'
 #     fi
 # }
-
-alias d=docker
-alias dc=docker-compose
-
-function restart() {
-    local SVC=$1
-
-    if [[ -z $SVC ]]; then
-        SVC=appserver
-    fi
-
-    docker-compose exec $SVC sh -c 'kill `/bin/cat /tmp/uwsgi.pid`'
-}
-
-alias restart=restart
-
-function dev-features-on() {
-    curl --request PUT --data True http://localhost:8500/v1/kv/config_override/shared/appserver/webclient/use_dev
-}
-
-alias dev-features-on=dev-features-on
-
-function dev-features-off() {
-    curl --request PUT --data False http://localhost:8500/v1/kv/config_override/shared/appserver/webclient/use_dev
-}
-
-alias dev-features-off=dev-features-off
-
-function debug() {
-    local SVC=$1
-    if [[ -z $SVC ]]; then
-        SVC=appserver
-    fi
-    echo "Running debug with SVC=$SVC..."
-    docker-compose stop $SVC
-    docker-compose run --service-ports --rm $SVC /lime/debug-service
-}
-
-alias debug=debug
-
-function setup-static-files() {
-    local SVC=$1
-    if [[ -z $SVC ]]; then
-        SVC=appserver
-    fi
-    docker-compose exec $SVC /lime/setup_static_files.py
-}
-
-alias setup-static-files=setup-static-files
-
-function wcbuild() {
-    local WD=`pwd`
-    cd ~/src/lime-webclient && dc down && make build && cd $WD
-}
-
-alias wcbuild=wcbuild
-
-function wcsetup() {
-    local WD=`pwd`
-    cd ~/src/lime-docker && make purge && make up && make add-application NAME=dev DB='/lime/src/core_54_with_mocked_data.bak' && dc exec appserver pip install -e /lime/src/lime-webclient && setup-static-files && dev-features-on && restart && cd $WD
-}
-
-alias wcsetup=wcsetup
-
-alias wcbash="dc run app"
-
-alias pytests="dc run app python3 manage.py test"
-
-function pipinstall() {
-    local PKG=$1
-    dc run appserver pip install -e src/$PKG
-}
-
-alias pipinstall=pipinstall

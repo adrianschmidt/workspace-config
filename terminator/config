@@ -35,14 +35,14 @@
       ratio = 0.499047619048
       type = VPaned
     [[[terminal2]]]
-      directory = /home/ads/src/lime-webclient
+      directory = /home/ads/src/lime-elements
       order = 0
       parent = child1
       profile = default
       type = Terminal
       uuid = cce3f27c-f23d-46b1-b792-bf74fc060f1e
     [[[terminal4]]]
-      directory = /home/ads/src/lime-webclient
+      directory = /home/ads/src/lime-elements
       order = 0
       parent = child3
       profile = default
@@ -68,5 +68,6 @@
     background_image = None
     copy_on_selection = True
     cursor_blink = False
-    font = CentSchbook Mono BT 10
+    font = UbuntuMono Nerd Font 11
     scrollback_lines = 15000
+    use_system_font = False

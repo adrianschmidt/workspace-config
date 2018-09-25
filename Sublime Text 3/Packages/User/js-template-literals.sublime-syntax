@@ -4,6 +4,7 @@
 name: JavaScript NG
 file_extensions:
   - html.ts
+  - html.tsx
 scope: source.js.ng
 contexts:
   main:

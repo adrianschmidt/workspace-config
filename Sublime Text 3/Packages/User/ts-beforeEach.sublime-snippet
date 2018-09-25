@@ -1,9 +1,9 @@
 <snippet>
     <content><![CDATA[
-context('when ${1}', function() {${2}});
+beforeEach(() => {${1}});
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>when</tabTrigger>
+    <tabTrigger>beforeEach</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <scope>source.js,source.ts</scope>
+    <scope>source.ts</scope>
 </snippet>

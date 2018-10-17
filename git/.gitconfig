@@ -1,6 +1,7 @@
 [user]
 	name = Adrian Schmidt
 	email = adrian.schmidt@lime.tech
+	signingkey = F0DD7954D6F52173 # Not the actual key, just the id of the key. See https://stackoverflow.com/a/48067999/280972
 [push]
     default = simple
 [alias]
@@ -14,13 +15,14 @@
     po = remote prune origin
     pod = remote prune origin --dry-run
     praise = blame
-    r = rebase
+    r = rebase -S
     s = status
     ulog = log @{u}
     pf = push --force-with-lease
     p = push
-    cp = cherry-pick
-	cm = commit
+    cp = cherry-pick -S
+	cm = cz -S
+    cmm = commit -S -m
 	rc = rebase --continue
 [color]
     ui = always
@@ -31,3 +33,5 @@
     conflictstyle = diff3
 [core]
     excludesfile = ~/.gitignore_global
+[gpg]
+	program = gpg2

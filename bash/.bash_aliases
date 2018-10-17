@@ -5,6 +5,8 @@ alias l='grc ls -CFh'
 alias d=docker
 alias dc=docker-compose
 
+alias gpg=gpg2
+
 function restart() {
     local SVC=$1
 

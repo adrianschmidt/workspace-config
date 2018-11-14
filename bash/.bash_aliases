@@ -67,7 +67,15 @@ alias fixRuamel="dc exec appserver pip install ruamel.yaml==0.15.41"
 
 function wcsetup() {
     local WD=`pwd`
-    cd ~/src/lime-docker && make up && sleep 15 && addDevApp && pipWc && cd $WD
+    cd ~/src/lime-docker && make up && sleep 15
+
+    RETRY=0
+    until addDevApp || [ $NEXT_WAIT_TIME -eq 10 ]; do
+        $(( NEXT_WAIT_TIME++ ))
+        sleep 5
+    done
+
+    pipWc && cd $WD
 }
 
 alias wcsetup=wcsetup

@@ -70,8 +70,12 @@ function wcsetup() {
     cd ~/src/lime-docker && make up && pipWc
 
     RETRY=0
-    until addDevApp || [ $NEXT_WAIT_TIME -eq 10 ]; do
-        $(( NEXT_WAIT_TIME++ ))
+    until addDevApp; do
+        if [ $RETRY -eq 10 ]
+        then
+            exit 1
+        fi
+        $(( RETRY++ ))
         sleep 10
     done
 

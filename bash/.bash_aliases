@@ -45,7 +45,7 @@ alias debug=debug
 
 function wcbuild() {
     local WD=`pwd`
-    cd ~/src/lime-webclient && dc down && make build && cd $WD
+    cd ~/src/lime-webclient && make build && cd $WD
 }
 
 alias wcbuild=wcbuild

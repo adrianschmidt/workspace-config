@@ -427,7 +427,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -798,21 +798,19 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/ads</string>
+			<string>~/src</string>
 		</dict>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
-	<key>NoSyncHaveUsedCopyMode</key>
-	<true/>
-	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>E06EB62E-1C3D-41F1-83F9-FCEF87FCED23</string>
 	<key>NoSyncLastTipTime</key>
-	<real>561453672.87362301</real>
+	<real>567179038.868119</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -820,7 +818,7 @@
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>554892553.25348103</real>
+	<real>567176570.66662598</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>000</string>
@@ -910,7 +908,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/ads/src/workspace-config/iTerm2</string>
+	<string>~/src/workspace-config/iTerm2</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1572,7 +1570,7 @@
 											<key>Window Type</key>
 											<integer>0</integer>
 											<key>Working Directory</key>
-											<string>/Users/ads</string>
+											<string>~</string>
 										</dict>
 										<key>Bookmark Name</key>
 										<string>Default</string>
@@ -1585,7 +1583,7 @@
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/ads/src/lime-elements</string>
+											<string>~/src</string>
 										</dict>
 										<key>Hosts</key>
 										<array/>
@@ -1611,7 +1609,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/ads/src/lime-elements</string>
+										<string>~/src</string>
 									</dict>
 									<key>View Type</key>
 									<string>SessionView</string>
@@ -2227,7 +2225,7 @@
 													<key>Window Type</key>
 													<integer>0</integer>
 													<key>Working Directory</key>
-													<string>/Users/ads</string>
+													<string>~</string>
 												</dict>
 												<key>Bookmark Name</key>
 												<string>Default</string>
@@ -2240,7 +2238,7 @@
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>/Users/ads/src/lime-elements</string>
+													<string>~/src</string>
 												</dict>
 												<key>Hosts</key>
 												<array/>
@@ -2266,7 +2264,7 @@
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/ads/src/lime-elements</string>
+												<string>~/src</string>
 											</dict>
 											<key>View Type</key>
 											<string>SessionView</string>
@@ -2879,7 +2877,7 @@
 													<key>Window Type</key>
 													<integer>0</integer>
 													<key>Working Directory</key>
-													<string>/Users/ads</string>
+													<string>~</string>
 												</dict>
 												<key>Bookmark Name</key>
 												<string>Default</string>
@@ -2892,7 +2890,7 @@
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>/Users/ads/src/lime-webclient</string>
+													<string>~/src</string>
 												</dict>
 												<key>Hosts</key>
 												<array/>
@@ -2918,7 +2916,7 @@
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/ads/src/lime-webclient</string>
+												<string>~/src</string>
 											</dict>
 											<key>View Type</key>
 											<string>SessionView</string>
@@ -3531,7 +3529,7 @@
 													<key>Window Type</key>
 													<integer>0</integer>
 													<key>Working Directory</key>
-													<string>/Users/ads</string>
+													<string>~</string>
 												</dict>
 												<key>Bookmark Name</key>
 												<string>Default</string>
@@ -3544,7 +3542,7 @@
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>/Users/ads/src/lime-docker</string>
+													<string>~/src</string>
 												</dict>
 												<key>Hosts</key>
 												<array/>
@@ -3570,7 +3568,7 @@
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/ads/src/lime-docker</string>
+												<string>~/src</string>
 											</dict>
 											<key>View Type</key>
 											<string>SessionView</string>

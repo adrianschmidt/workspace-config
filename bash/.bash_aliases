@@ -86,6 +86,8 @@ alias wcsetup=wcsetup
 
 alias dbash="dc run app bash"
 
+alias dprune="d system prune --volumes -f"
+
 alias pytests="dc run app python3 manage.py test"
 
 function pipinstall() {

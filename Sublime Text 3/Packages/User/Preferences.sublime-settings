@@ -26,6 +26,7 @@
 	],
 	"caret_style": "solid",
 	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
+	"copy_with_empty_selection": false,
 	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[

@@ -92,7 +92,7 @@ alias pytests="dc run app python3 manage.py test"
 
 function pipinstall() {
     local PKG=$1
-    dc run appserver pip install -e src/$PKG
+    dc exec appserver pip install -e /lime/src/$PKG --index-url https://pypi.lime.tech:3443/lime/develop/+simple/
 }
 
 alias pipinstall=pipinstall

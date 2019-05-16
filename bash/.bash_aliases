@@ -65,9 +65,9 @@ alias pipWc="dc exec appserver pip install -e /lime/src/lime-webclient --index-u
 alias fixSQLAlchemy="dc exec appserver pip install SQLAlchemy==1.2.8"
 alias fixRuamel="dc exec appserver pip install ruamel.yaml==0.15.41"
 
-function wcsetup() {
+function addDevAppFn() {
     local WD=`pwd`
-    cd ~/src/lime-docker && make up && pipWc
+    cd ~/src/lime-docker
 
     RETRY=0
     until addDevApp; do
@@ -79,6 +79,20 @@ function wcsetup() {
         sleep 10
     done
 
+    cd $WD
+}
+
+function dcsetup() {
+    local WD=`pwd`
+    cd ~/src/lime-docker && make up && addDevAppFn
+    cd $WD
+}
+
+alias dcsetup=dcsetup
+
+function wcsetup() {
+    local WD=`pwd`
+    cd ~/src/lime-docker && make up && pipWc && addDevAppFn
     cd $WD
 }
 

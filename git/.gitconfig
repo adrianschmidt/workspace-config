@@ -12,12 +12,12 @@
     hb = log --pretty=format:'%C(yellow)%h%Creset %cd | %s%C(yellow)%d%Creset %C(red)(%an, %cr)%Creset' --graph --date=short ad40478d1cac4b95c70c179befb02516f0e728ac..HEAD
     hist = log --pretty=\"format:%C(blue)%h%C(red)%d%C(yellow) %s %C(green)%an%Creset, %ar\" --graph
     ignored = !git ls-files -v | grep "^[[:lower:]]"
-    po = remote prune origin
+    po = remote prune origin # Delete all local copies of upstream branches which no longer exist upstream.
     pod = remote prune origin --dry-run
     praise = blame
     r = rebase -S
     s = status
-    ulog = log @{u}
+    ulog = log @{u} # See the history of the upstream version of the current branch. (Do `git fetch` first!)
     pf = push --force-with-lease
     p = push
     cp = cherry-pick -S
@@ -30,10 +30,10 @@
 [pull]
     rebase = true
 [merge]
-    conflictstyle = diff3
+    conflictstyle = diff3 # Show not only the two current versions, but also their latest common ancestor. Makes it much easier to see what has changed in each current version.
 [core]
-    excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore_global # This is the global .gitignore file.
 [gpg]
     program = gpg2
 [rebase]
-    autosquash = true
+    autosquash = true # Love this! When running an interactive rebase, it automatically moves commits made with `git commit --fixup` or `--squash` to the correct line, and marks them with `fixup` and `squash` respectively.

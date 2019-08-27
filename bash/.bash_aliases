@@ -112,3 +112,13 @@ function pipinstall() {
 alias pipinstall=pipinstall
 
 alias npmOutdated="npm outdated --registry=\"$VERDACCIO\""
+
+function uninstallPlugin() {
+    local PLG=$1
+    if [[ -z $PLG ]]; then
+        exit 1
+    fi
+    docker-compose exec appserver rm -rf /var/lib/lime/plugins/$PLG
+}
+
+alias uninstallPlugin=uninstallPlugin

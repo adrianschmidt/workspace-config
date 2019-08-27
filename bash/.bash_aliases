@@ -122,3 +122,6 @@ function uninstallPlugin() {
 }
 
 alias uninstallPlugin=uninstallPlugin
+
+alias initDevApp="cd ~/src/lime-dev-app && . venv/bin/activate && ./manage.py up --init-app"
+alias runDevApp="cd ~/src/lime-dev-app && . venv/bin/activate && FLASK_ENV=development flask run"

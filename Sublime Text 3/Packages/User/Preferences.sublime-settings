@@ -18,6 +18,7 @@
 		".docz/*",
 		".git/*",
 		".stencil/*",
+		".tmp/*",
 		"dist/*",
 		"node_modules/*",
 		"prebuild/*",
@@ -32,9 +33,14 @@
 	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
+		".docz",
+		".stencil",
+		".tmp",
+		"dist",
+		"node_modules"
 	],
 	"font_face": "CenturySchoolbookBT Nerd Font",
-	"font_size": 13,
+	"font_size": 14,
 	"highlight_line": true,
 	"ignored_packages":
 	[

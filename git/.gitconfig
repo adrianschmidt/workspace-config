@@ -1,7 +1,7 @@
 [user]
-	name = Adrian Schmidt
-	email = adrian.schmidt@lime.tech
-	signingkey = F0DD7954D6F52173 # Not the actual key, just the id of the key. See https://stackoverflow.com/a/48067999/280972
+    name = Adrian Schmidt
+    email = adrian.schmidt@lime.tech
+    signingkey = F0DD7954D6F52173 # Not the actual key, just the id of the key. See https://stackoverflow.com/a/48067999/280972
 [push]
     default = simple
 [alias]
@@ -21,9 +21,9 @@
     pf = push --force-with-lease
     p = push
     cp = cherry-pick -S
-	cm = cz -S
+    cm = cz -S
     cmm = commit -S -m
-	rc = rebase --continue
+    rc = rebase --continue
 [color]
     ui = always
     diff = always
@@ -34,6 +34,6 @@
 [core]
     excludesfile = ~/.gitignore_global
 [gpg]
-	program = gpg2
+    program = gpg2
 [rebase]
-	autosquash = true
+    autosquash = true

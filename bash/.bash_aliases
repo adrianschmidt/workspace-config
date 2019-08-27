@@ -61,7 +61,7 @@ function setup-static-files() {
 alias setup-static-files=setup-static-files
 
 alias addDevApp="make add-application DB=~/src/core_54_with_mocked_data.bak"
-alias pipWc="dc exec appserver pip install -e /lime/src/lime-webclient --index-url https://pypi.lime.tech:3443/lime/develop/+simple/ && setup-static-files && dev-features-on && restart"
+alias pipWc="dc exec appserver pip install -e /lime/src/lime-webclient && setup-static-files && dev-features-on && restart"
 alias fixSQLAlchemy="dc exec appserver pip install SQLAlchemy==1.2.8"
 alias fixRuamel="dc exec appserver pip install ruamel.yaml==0.15.41"
 

@@ -38,3 +38,15 @@
     program = gpg2
 [rebase]
     autosquash = true # Love this! When running an interactive rebase, it automatically moves commits made with `git commit --fixup` or `--squash` to the correct line, and marks them with `fixup` and `squash` respectively.
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

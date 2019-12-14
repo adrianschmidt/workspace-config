@@ -25,6 +25,8 @@
     cmm = commit -S -m
     rc = rebase --continue
 	fix = commit --fixup
+	d = diff
+	a = add -A
 [color]
     ui = always
     diff = always

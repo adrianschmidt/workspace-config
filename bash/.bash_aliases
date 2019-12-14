@@ -1,3 +1,7 @@
+export PIP_REQUIRE_VIRTUALENV=true
+
+alias gpip='PIP_REQUIRE_VIRTUALENV="" pip'
+
 alias ll='grc ls -alFh'
 alias la='grc ls -Ah'
 alias l='grc ls -CFh'
@@ -106,7 +110,7 @@ alias pytests="dc run app python3 manage.py test"
 
 function pipinstall() {
     local PKG=$1
-    dc exec appserver pip install -e /lime/src/$PKG --index-url https://pypi.lime.tech:3443/lime/develop/+simple/
+    dc exec appserver pip install -e /lime/src/$PKG
 }
 
 alias pipinstall=pipinstall
@@ -123,5 +127,13 @@ function uninstallPlugin() {
 
 alias uninstallPlugin=uninstallPlugin
 
-alias initDevApp="cd ~/src/lime-dev-app && . venv/bin/activate && ./manage.py up --init-app"
-alias runDevApp="cd ~/src/lime-dev-app && . venv/bin/activate && FLASK_ENV=development flask run"
+alias ldavenv="cd ~/src/lime-dev-app && . venv/bin/activate"
+alias ldabuild="ldavenv && ./manage.py build-images"
+alias ldainit="ldavenv && ./manage.py up --init-app"
+alias ldarun="ldavenv && FLASK_ENV=development flask run"
+alias awsLogin="~/src/lime-dev-app/aws-login.sh"
+
+alias pypi="pip install --index-url $PYPI_INDEX_URL"
+
+alias lint="npm run lint"
+alias lintf="npm run lint:fix"

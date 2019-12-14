@@ -13,7 +13,7 @@
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
 	<key>Default Arrangement Name</key>
-	<string>Default Arrangement</string>
+	<string>3 process windows</string>
 	<key>Default Bookmark Guid</key>
 	<string>565D831B-B9DA-4962-A2E2-BE1A2FEBCE8B</string>
 	<key>DimBackgroundWindows</key>
@@ -225,7 +225,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>117 277 796 486 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1080 1045 1080 559 -1080 -293 1080 1897 </string>
+	<string>0 314 650 463 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -885,7 +885,7 @@
 		<key>screenFrame</key>
 		<string>{{-1080, -293}, {1080, 1920}}</string>
 		<key>topLeft</key>
-		<string>{-1059, 1323}</string>
+		<string>{-1059, 1324}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -900,7 +900,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>591611729.92194605</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>27</integer>
+	<integer>34</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1246,6 +1246,14 @@
 				<true/>
 				<key>name</key>
 				<string>currentTab.currentSession.pid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.termid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -1774,7 +1782,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-11-07T14:52:39Z</date>
+	<date>2019-11-08T08:03:19Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -1782,6 +1790,8 @@
 	<key>Selection Respects Soft Boundaries</key>
 	<true/>
 	<key>ShowBookmarkName</key>
+	<false/>
+	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
@@ -1843,6 +1853,8 @@
 										<key>Bookmark</key>
 										<dict>
 											<key>ASCII Anti Aliased</key>
+											<true/>
+											<key>Allow Title Setting</key>
 											<true/>
 											<key>Ambiguous Double Width</key>
 											<false/>
@@ -2023,7 +2035,7 @@
 											<key>Columns</key>
 											<integer>80</integer>
 											<key>Command</key>
-											<string></string>
+											<string>/bin/bash</string>
 											<key>Cursor Color</key>
 											<dict>
 												<key>Blue Component</key>
@@ -2045,7 +2057,7 @@
 											<key>Cursor Type</key>
 											<integer>1</integer>
 											<key>Custom Command</key>
-											<string>No</string>
+											<string>Yes</string>
 											<key>Custom Directory</key>
 											<string>Yes</string>
 											<key>Default Bookmark</key>
@@ -2448,6 +2460,8 @@
 											<array/>
 											<key>Terminal Type</key>
 											<string>xterm-256color</string>
+											<key>Title Components</key>
+											<integer>1</integer>
 											<key>Transparency</key>
 											<real>0.0</real>
 											<key>Unlimited Scrollback</key>
@@ -2488,6 +2502,7 @@
 											<string>git cm -m "tmp"</string>
 											<string>git commit -m "tmp"</string>
 											<string>git d HEAD..02bae56a8fa437b8207a33104ca463b5f47c2288 -- iTerm2/</string>
+											<string>cd ..</string>
 										</array>
 										<key>Directories</key>
 										<array>
@@ -2509,14 +2524,35 @@
 											<string>/Users/ads/src/workspace-config</string>
 											<string>/Users/ads/src/workspace-config</string>
 											<string>/Users/ads/src/workspace-config</string>
+											<string>/Users/ads/src/workspace-config</string>
+											<string>/Users/ads/src/workspace-config</string>
+											<string>/Users/ads/src</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>~/src</string>
+											<string>/Users/ads/src/workspace-config</string>
 										</dict>
 										<key>Hosts</key>
 										<array>
+											<dict>
+												<key>Host name</key>
+												<string>d6mh45jmb.local</string>
+												<key>User name</key>
+												<string>ads</string>
+											</dict>
+											<dict>
+												<key>Host name</key>
+												<string>d6mh45jmb.local</string>
+												<key>User name</key>
+												<string>ads</string>
+											</dict>
+											<dict>
+												<key>Host name</key>
+												<string>d6mh45jmb.local</string>
+												<key>User name</key>
+												<string>ads</string>
+											</dict>
 											<dict>
 												<key>Host name</key>
 												<string>d6mh45jmb.local</string>
@@ -2651,7 +2687,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/ads/src/workspace-config</string>
+										<string>/Users/ads/src</string>
 										<key>Working Directory Poller Disabled</key>
 										<true/>
 									</dict>
@@ -2680,6 +2716,8 @@
 												<key>Bookmark</key>
 												<dict>
 													<key>ASCII Anti Aliased</key>
+													<true/>
+													<key>Allow Title Setting</key>
 													<true/>
 													<key>Ambiguous Double Width</key>
 													<false/>
@@ -2860,7 +2898,7 @@
 													<key>Columns</key>
 													<integer>80</integer>
 													<key>Command</key>
-													<string></string>
+													<string>/bin/bash</string>
 													<key>Cursor Color</key>
 													<dict>
 														<key>Blue Component</key>
@@ -2882,7 +2920,7 @@
 													<key>Cursor Type</key>
 													<integer>1</integer>
 													<key>Custom Command</key>
-													<string>No</string>
+													<string>Yes</string>
 													<key>Custom Directory</key>
 													<string>Yes</string>
 													<key>Default Bookmark</key>
@@ -3285,6 +3323,8 @@
 													<array/>
 													<key>Terminal Type</key>
 													<string>xterm-256color</string>
+													<key>Title Components</key>
+													<integer>1</integer>
 													<key>Transparency</key>
 													<real>0.0</real>
 													<key>Unlimited Scrollback</key>
@@ -3314,14 +3354,28 @@
 												<array>
 													<string>/Users/ads/src</string>
 													<string>/Users/ads/src</string>
+													<string>/Users/ads/src</string>
+													<string>/Users/ads/src</string>
 												</array>
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>~/src</string>
+													<string>/Users/ads/src</string>
 												</dict>
 												<key>Hosts</key>
 												<array>
+													<dict>
+														<key>Host name</key>
+														<string>d6mh45jmb.local</string>
+														<key>User name</key>
+														<string>ads</string>
+													</dict>
+													<dict>
+														<key>Host name</key>
+														<string>d6mh45jmb.local</string>
+														<key>User name</key>
+														<string>ads</string>
+													</dict>
 													<dict>
 														<key>Host name</key>
 														<string>d6mh45jmb.local</string>
@@ -3362,14 +3416,14 @@
 												<key>Working Directory</key>
 												<string>/Users/ads/src</string>
 												<key>Working Directory Poller Disabled</key>
-												<false/>
+												<true/>
 											</dict>
 											<key>View Type</key>
 											<string>SessionView</string>
 											<key>frame</key>
 											<dict>
 												<key>height</key>
-												<real>231</real>
+												<real>229</real>
 												<key>width</key>
 												<real>540</real>
 												<key>x</key>
@@ -3386,6 +3440,8 @@
 												<key>Bookmark</key>
 												<dict>
 													<key>ASCII Anti Aliased</key>
+													<true/>
+													<key>Allow Title Setting</key>
 													<true/>
 													<key>Ambiguous Double Width</key>
 													<false/>
@@ -3566,7 +3622,7 @@
 													<key>Columns</key>
 													<integer>80</integer>
 													<key>Command</key>
-													<string></string>
+													<string>/bin/bash</string>
 													<key>Cursor Color</key>
 													<dict>
 														<key>Blue Component</key>
@@ -3588,7 +3644,7 @@
 													<key>Cursor Type</key>
 													<integer>1</integer>
 													<key>Custom Command</key>
-													<string>No</string>
+													<string>Yes</string>
 													<key>Custom Directory</key>
 													<string>Yes</string>
 													<key>Default Bookmark</key>
@@ -3991,6 +4047,8 @@
 													<array/>
 													<key>Terminal Type</key>
 													<string>xterm-256color</string>
+													<key>Title Components</key>
+													<integer>1</integer>
 													<key>Transparency</key>
 													<real>0.0</real>
 													<key>Unlimited Scrollback</key>
@@ -4020,14 +4078,28 @@
 												<array>
 													<string>/Users/ads/src</string>
 													<string>/Users/ads/src</string>
+													<string>/Users/ads/src</string>
+													<string>/Users/ads/src</string>
 												</array>
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>~/src</string>
+													<string>/Users/ads/src</string>
 												</dict>
 												<key>Hosts</key>
 												<array>
+													<dict>
+														<key>Host name</key>
+														<string>d6mh45jmb.local</string>
+														<key>User name</key>
+														<string>ads</string>
+													</dict>
+													<dict>
+														<key>Host name</key>
+														<string>d6mh45jmb.local</string>
+														<key>User name</key>
+														<string>ads</string>
+													</dict>
 													<dict>
 														<key>Host name</key>
 														<string>d6mh45jmb.local</string>
@@ -4068,20 +4140,20 @@
 												<key>Working Directory</key>
 												<string>/Users/ads/src</string>
 												<key>Working Directory Poller Disabled</key>
-												<false/>
+												<true/>
 											</dict>
 											<key>View Type</key>
 											<string>SessionView</string>
 											<key>frame</key>
 											<dict>
 												<key>height</key>
-												<real>89</real>
+												<real>84</real>
 												<key>width</key>
 												<real>540</real>
 												<key>x</key>
 												<real>0.0</real>
 												<key>y</key>
-												<real>232</real>
+												<real>230</real>
 											</dict>
 										</dict>
 										<dict>
@@ -4092,6 +4164,8 @@
 												<key>Bookmark</key>
 												<dict>
 													<key>ASCII Anti Aliased</key>
+													<true/>
+													<key>Allow Title Setting</key>
 													<true/>
 													<key>Ambiguous Double Width</key>
 													<false/>
@@ -4272,7 +4346,7 @@
 													<key>Columns</key>
 													<integer>80</integer>
 													<key>Command</key>
-													<string></string>
+													<string>/bin/bash</string>
 													<key>Cursor Color</key>
 													<dict>
 														<key>Blue Component</key>
@@ -4294,7 +4368,7 @@
 													<key>Cursor Type</key>
 													<integer>1</integer>
 													<key>Custom Command</key>
-													<string>No</string>
+													<string>Yes</string>
 													<key>Custom Directory</key>
 													<string>Yes</string>
 													<key>Default Bookmark</key>
@@ -4697,6 +4771,8 @@
 													<array/>
 													<key>Terminal Type</key>
 													<string>xterm-256color</string>
+													<key>Title Components</key>
+													<integer>1</integer>
 													<key>Transparency</key>
 													<real>0.0</real>
 													<key>Unlimited Scrollback</key>
@@ -4726,11 +4802,13 @@
 												<array>
 													<string>/Users/ads/src</string>
 													<string>/Users/ads/src</string>
+													<string>/Users/ads/src</string>
+													<string>/Users/ads/src</string>
 												</array>
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>~/src</string>
+													<string>/Users/ads/src</string>
 												</dict>
 												<key>Hostname to Shell</key>
 												<dict>
@@ -4739,6 +4817,18 @@
 												</dict>
 												<key>Hosts</key>
 												<array>
+													<dict>
+														<key>Host name</key>
+														<string>d6mh45jmb.local</string>
+														<key>User name</key>
+														<string>ads</string>
+													</dict>
+													<dict>
+														<key>Host name</key>
+														<string>d6mh45jmb.local</string>
+														<key>User name</key>
+														<string>ads</string>
+													</dict>
 													<dict>
 														<key>Host name</key>
 														<string>d6mh45jmb.local</string>
@@ -4779,20 +4869,20 @@
 												<key>Working Directory</key>
 												<string>/Users/ads/src</string>
 												<key>Working Directory Poller Disabled</key>
-												<false/>
+												<true/>
 											</dict>
 											<key>View Type</key>
 											<string>SessionView</string>
 											<key>frame</key>
 											<dict>
 												<key>height</key>
-												<real>88</real>
+												<real>84</real>
 												<key>width</key>
 												<real>540</real>
 												<key>x</key>
 												<real>0.0</real>
 												<key>y</key>
-												<real>322</real>
+												<real>315</real>
 											</dict>
 										</dict>
 										<dict>
@@ -4803,6 +4893,8 @@
 												<key>Bookmark</key>
 												<dict>
 													<key>ASCII Anti Aliased</key>
+													<true/>
+													<key>Allow Title Setting</key>
 													<true/>
 													<key>Ambiguous Double Width</key>
 													<false/>
@@ -4983,7 +5075,7 @@
 													<key>Columns</key>
 													<integer>80</integer>
 													<key>Command</key>
-													<string></string>
+													<string>/bin/bash</string>
 													<key>Cursor Color</key>
 													<dict>
 														<key>Blue Component</key>
@@ -5005,7 +5097,7 @@
 													<key>Cursor Type</key>
 													<integer>1</integer>
 													<key>Custom Command</key>
-													<string>No</string>
+													<string>Yes</string>
 													<key>Custom Directory</key>
 													<string>Yes</string>
 													<key>Default Bookmark</key>
@@ -5408,6 +5500,8 @@
 													<array/>
 													<key>Terminal Type</key>
 													<string>xterm-256color</string>
+													<key>Title Components</key>
+													<integer>1</integer>
 													<key>Transparency</key>
 													<real>0.0</real>
 													<key>Unlimited Scrollback</key>
@@ -5437,14 +5531,28 @@
 												<array>
 													<string>/Users/ads/src</string>
 													<string>/Users/ads/src</string>
+													<string>/Users/ads/src</string>
+													<string>/Users/ads/src</string>
 												</array>
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>~/src</string>
+													<string>/Users/ads/src</string>
 												</dict>
 												<key>Hosts</key>
 												<array>
+													<dict>
+														<key>Host name</key>
+														<string>d6mh45jmb.local</string>
+														<key>User name</key>
+														<string>ads</string>
+													</dict>
+													<dict>
+														<key>Host name</key>
+														<string>d6mh45jmb.local</string>
+														<key>User name</key>
+														<string>ads</string>
+													</dict>
 													<dict>
 														<key>Host name</key>
 														<string>d6mh45jmb.local</string>
@@ -5473,7 +5581,7 @@
 													<string>Shell Launcher</string>
 												</dict>
 												<key>Rows</key>
-												<integer>5</integer>
+												<integer>6</integer>
 												<key>Session GUID</key>
 												<string>3C7F305C-FB55-4E27-AE3A-63CD1D74C812</string>
 												<key>Shell Integration Ever Used</key>
@@ -5485,20 +5593,20 @@
 												<key>Working Directory</key>
 												<string>/Users/ads/src</string>
 												<key>Working Directory Poller Disabled</key>
-												<false/>
+												<true/>
 											</dict>
 											<key>View Type</key>
 											<string>SessionView</string>
 											<key>frame</key>
 											<dict>
 												<key>height</key>
-												<real>89</real>
+												<real>100</real>
 												<key>width</key>
 												<real>540</real>
 												<key>x</key>
 												<real>0.0</real>
 												<key>y</key>
-												<real>411</real>
+												<real>400</real>
 											</dict>
 										</dict>
 									</array>

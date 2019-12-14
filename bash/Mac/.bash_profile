@@ -86,3 +86,4 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
+export BASH_SILENCE_DEPRECATION_WARNING=1

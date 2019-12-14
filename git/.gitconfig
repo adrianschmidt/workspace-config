@@ -1,7 +1,7 @@
 [user]
     name = Adrian Schmidt
     email = adrian.schmidt@lime.tech
-	signingkey = 01291847
+    signingkey = 01291847
 [push]
     default = simple
 [alias]
@@ -24,9 +24,9 @@
     cm = cz -S
     cmm = commit -S -m
     rc = rebase --continue
-	fix = commit --fixup
-	d = diff
-	a = add -A
+    fix = commit --fixup
+    d = diff
+    a = add -A
 [color]
     ui = always
     diff = always
@@ -36,23 +36,23 @@
     conflictstyle = diff3 # Show not only the two current versions, but also their latest common ancestor. Makes it much easier to see what has changed in each current version.
 [core]
     excludesfile = ~/.gitignore_global # This is the global .gitignore file.
-	pager = diff-so-fancy | less --tabs=4 -RFX
+    pager = diff-so-fancy | less --tabs=4 -RFX
 [gpg]
-	program = gpg2
+    program = gpg2
 [rebase]
     autosquash = true # Love this! When running an interactive rebase, it automatically moves commits made with `git commit --fixup` or `--squash` to the correct line, and marks them with `fixup` and `squash` respectively.
-	missingCommitsCheck = error
+    missingCommitsCheck = error
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
 [color "diff"]
-	meta = 11
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+    meta = 11
+    frag = magenta bold
+    commit = yellow bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
 [diff-so-fancy]
-	stripLeadingSymbols = false
+    stripLeadingSymbols = false

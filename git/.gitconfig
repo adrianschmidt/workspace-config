@@ -27,6 +27,7 @@
     fix = commit --fixup
     d = diff
     a = add -A
+	ds = diff --staged
 [color]
     ui = always
     diff = always

@@ -1764,7 +1764,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/ads/src/workspace-config/iTerm2</string>
+	<string>~/src/workspace-config/iTerm2</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -2504,32 +2504,32 @@
 										</array>
 										<key>Directories</key>
 										<array>
-											<string>/Users/ads/src</string>
-											<string>/Users/ads/src</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src/workspace-config</string>
-											<string>/Users/ads/src</string>
+											<string>~/src</string>
+											<string>~/src</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
+											<string>~/src</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/ads/src/workspace-config</string>
+											<string>~/src/workspace-config</string>
 										</dict>
 										<key>Hosts</key>
 										<array>
@@ -2685,7 +2685,7 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/ads/src</string>
+										<string>~/src</string>
 										<key>Working Directory Poller Disabled</key>
 										<true/>
 									</dict>
@@ -3350,15 +3350,15 @@
 												<array/>
 												<key>Directories</key>
 												<array>
-													<string>/Users/ads/src</string>
-													<string>/Users/ads/src</string>
-													<string>/Users/ads/src</string>
-													<string>/Users/ads/src</string>
+													<string>~/src</string>
+													<string>~/src</string>
+													<string>~/src</string>
+													<string>~/src</string>
 												</array>
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>/Users/ads/src</string>
+													<string>~/src</string>
 												</dict>
 												<key>Hosts</key>
 												<array>
@@ -3412,7 +3412,7 @@
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/ads/src</string>
+												<string>~/src</string>
 												<key>Working Directory Poller Disabled</key>
 												<true/>
 											</dict>
@@ -4074,15 +4074,15 @@
 												<array/>
 												<key>Directories</key>
 												<array>
-													<string>/Users/ads/src</string>
-													<string>/Users/ads/src</string>
-													<string>/Users/ads/src</string>
-													<string>/Users/ads/src</string>
+													<string>~/src</string>
+													<string>~/src</string>
+													<string>~/src</string>
+													<string>~/src</string>
 												</array>
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>/Users/ads/src</string>
+													<string>~/src</string>
 												</dict>
 												<key>Hosts</key>
 												<array>
@@ -4136,7 +4136,7 @@
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/ads/src</string>
+												<string>~/src</string>
 												<key>Working Directory Poller Disabled</key>
 												<true/>
 											</dict>
@@ -4798,15 +4798,15 @@
 												<array/>
 												<key>Directories</key>
 												<array>
-													<string>/Users/ads/src</string>
-													<string>/Users/ads/src</string>
-													<string>/Users/ads/src</string>
-													<string>/Users/ads/src</string>
+													<string>~/src</string>
+													<string>~/src</string>
+													<string>~/src</string>
+													<string>~/src</string>
 												</array>
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>/Users/ads/src</string>
+													<string>~/src</string>
 												</dict>
 												<key>Hostname to Shell</key>
 												<dict>
@@ -4865,7 +4865,7 @@
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/ads/src</string>
+												<string>~/src</string>
 												<key>Working Directory Poller Disabled</key>
 												<true/>
 											</dict>
@@ -5527,15 +5527,15 @@
 												<array/>
 												<key>Directories</key>
 												<array>
-													<string>/Users/ads/src</string>
-													<string>/Users/ads/src</string>
-													<string>/Users/ads/src</string>
-													<string>/Users/ads/src</string>
+													<string>~/src</string>
+													<string>~/src</string>
+													<string>~/src</string>
+													<string>~/src</string>
 												</array>
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>/Users/ads/src</string>
+													<string>~/src</string>
 												</dict>
 												<key>Hosts</key>
 												<array>
@@ -5589,7 +5589,7 @@
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/ads/src</string>
+												<string>~/src</string>
 												<key>Working Directory Poller Disabled</key>
 												<true/>
 											</dict>

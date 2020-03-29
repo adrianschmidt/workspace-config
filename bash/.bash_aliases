@@ -10,8 +10,6 @@ alias d=docker
 alias dc=docker-compose
 alias dprune="d system prune --volumes -f"
 
-alias gpg=gpg2
-
 alias npmOutdated="npm outdated"
 
 function ldavenv() {

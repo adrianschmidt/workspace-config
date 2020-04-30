@@ -28,6 +28,7 @@
     d = diff
     a = add -A
 	ds = diff --staged
+	find = log --all --grep
 [color]
     ui = always
     diff = always

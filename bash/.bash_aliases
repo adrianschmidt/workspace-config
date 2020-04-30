@@ -19,9 +19,9 @@ function ldavenv() {
 }
 
 alias ldavenv="ldavenv"
-alias ldabuild="ldavenv && cd ~/src/lime-dev-app && ./manage.py build-images"
-alias ldainit="ldavenv && cd ~/src/lime-dev-app && ./manage.py up --init-app"
-alias ldarun="ldavenv && cd ~/src/lime-dev-app && FLASK_ENV=development flask run"
+alias ldabuild="cd ~/src/lime-dev-app && ./manage.py build-images"
+alias ldainit="cd ~/src/lime-dev-app && ./manage.py up --init-app"
+alias ldarun="cd ~/src/lime-dev-app && FLASK_ENV=development flask run"
 
 alias awsLogin="~/src/lime-dev-app/aws-login.sh"
 

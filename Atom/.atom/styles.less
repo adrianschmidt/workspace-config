@@ -15,6 +15,16 @@ atom-text-editor.editor .invisible-character {
   color: @syntax-background-color;
 }
 
+atom-text-editor, atom-text-editor {
+  .cursors.blink-off .cursor {
+    opacity: 1;
+  }
+}
+
+background-tips {
+  display: none !important;
+}
+
 /*
  * Examples
  * (To see them, uncomment and save)
@@ -34,14 +44,4 @@ atom-text-editor {
 // style UI elements inside atom-text-editor
 atom-text-editor .cursor {
   // border-color: red;
-}
-
-atom-text-editor, atom-text-editor {
-  .cursors.blink-off .cursor {
-    opacity: 1;
-  }
-}
-
-background-tips {
-  display: none !important;
 }

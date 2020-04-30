@@ -12,6 +12,7 @@
     fontFamily: "CenturySchoolbookBT Nerd Font, Menlo, Consolas, DejaVu Sans Mono, monospace"
     fontSize: 13
     scrollPastEnd: true
+    showInvisibles: true
     softWrapAtPreferredLineLength: true
     tabLength: 4
   "exception-reporting":

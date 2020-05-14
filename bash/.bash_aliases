@@ -22,7 +22,7 @@ alias ldavenv="ldavenv"
 alias ldabuild="cd ~/src/lime-dev-app && ./manage.py build-images"
 alias ldainit="cd ~/src/lime-dev-app && ./manage.py up --init-app"
 alias ldarun="cd ~/src/lime-dev-app && FLASK_ENV=development flask run"
-alias ldaupdate="pip uninstall lime-webclient -y && pip install -r requirements.txt && pip install -e ../lime-webclient/"
+alias ldaupdate="pip uninstall -y lime-core lime-webclient && pip install -r requirements.txt && pip install -e ../lime-webclient/"
 
 alias awsLogin="~/src/lime-dev-app/aws-login.sh"
 

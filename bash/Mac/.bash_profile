@@ -1,6 +1,9 @@
 # Install with `brew install bash_completion`
 source /usr/local/Cellar/bash-completion/1.3_3/etc/bash_completion
 
+# enable recursive globbing
+shopt -s globstar
+
 # get current branch in git repo
 function parse_git_branch() {
     BRANCH=`git branch 2> /dev/null --color=never | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`

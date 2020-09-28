@@ -7,6 +7,9 @@
       "whitespace"
       "github"
     ]
+    packagesWithSnippetsDisabled: [
+      "atom-typescript"
+    ]
     projectHome: "~/src"
     telemetryConsent: "limited"
   editor:

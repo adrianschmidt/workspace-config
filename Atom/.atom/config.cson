@@ -5,6 +5,7 @@
     audioBeep: false
     disabledPackages: [
       "whitespace"
+      "github"
     ]
     projectHome: "~/src"
     telemetryConsent: "limited"

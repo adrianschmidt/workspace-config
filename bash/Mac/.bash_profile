@@ -1,4 +1,4 @@
-# Install with `brew install bash_completion`
+# Install with `brew install bash-completion`
 source /usr/local/Cellar/bash-completion/1.3_3/etc/bash_completion
 
 # enable recursive globbing

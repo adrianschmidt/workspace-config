@@ -12,13 +12,8 @@ alias dprune="d system prune --volumes -f"
 
 alias npmOutdated="npm outdated"
 
-function ldavenv() {
-    local WD=`pwd`
-    cd ~/src/lime-dev-app && . venv/bin/activate
-    cd $WD
-}
-
-alias ldavenv="ldavenv"
+alias penv="poetry shell"
+alias venv=". venv/bin/activate"
 alias ldabuild="cd ~/src/lime-dev-app && ./manage.py build-images"
 alias ldainit="cd ~/src/lime-dev-app && ./manage.py up --init-app"
 alias ldarun="cd ~/src/lime-dev-app && FLASK_ENV=development flask run"

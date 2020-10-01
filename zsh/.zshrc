@@ -13,3 +13,6 @@ fi
 
 # Created by `userpath` on 2020-09-29 13:23:09
 export PATH="$PATH:/Users/ads/.local/bin"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"

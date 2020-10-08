@@ -2,7 +2,7 @@
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # enable recursive globbing
-shopt -s globstar
+# shopt -s globstar
 
 # get current branch in git repo
 function parse_git_branch() {

@@ -19,6 +19,7 @@ alias ldainit="cd ~/src/lime-dev-app && ./manage.py up --init-app"
 alias ldarun="cd ~/src/lime-dev-app && FLASK_ENV=development flask run"
 alias ldaupdate="pip uninstall -y lime-core lime-webclient && pip install -r requirements.txt && pip install -e ../lime-webclient/"
 alias ldaupdatewithcore="pip uninstall -y lime-core lime-webclient && pip install -r requirements.txt && pip install -e ../lime-core/ && pip install -e ../lime-webclient/"
+alias ldarunimport="celery worker --app lime_import.task.app -P solo"
 
 alias awsLogin="~/src/lime-dev-app/aws-login.sh"
 

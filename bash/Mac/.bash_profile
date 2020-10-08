@@ -77,6 +77,9 @@ export PS1="\n\[\e[35m\]╭ \[\e[m\]\[\e[33m\]\t\[\e[m\] \w \`parse_git_branch\`
 if [ -f ~/.bash_secrets ]; then
     . ~/.bash_secrets
 fi
+if [ -f ~/.zsh_secrets ]; then
+    . ~/.zsh_secrets
+fi
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

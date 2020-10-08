@@ -1,5 +1,5 @@
 # Install with `brew install bash-completion`
-source /usr/local/Cellar/bash-completion/1.3_3/etc/bash_completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # enable recursive globbing
 shopt -s globstar

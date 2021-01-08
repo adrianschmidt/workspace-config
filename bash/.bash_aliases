@@ -21,7 +21,7 @@ alias ldaupdate="pip uninstall -y lime-core lime-webclient && pip install -r req
 alias ldaupdatewithcore="pip uninstall -y lime-core lime-webclient && pip install -r requirements.txt && pip install -e ../lime-core/ && pip install -e ../lime-webclient/"
 alias ldarunimport="celery worker --app lime_import.task.app -P solo"
 
-alias awsLogin="~/src/lime-dev-app/aws-login.sh"
+alias awsLogin="aws sso login --profile sharedecr"
 
 alias lint="npm run lint"
 alias lintf="npm run lint:fix"

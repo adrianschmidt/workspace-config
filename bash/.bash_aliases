@@ -12,6 +12,27 @@ alias dprune="d system prune --volumes -f"
 
 alias npmOutdated="npm outdated"
 
+function npmInstallLatestAndCommit() {
+    local PACKAGE=$1
+    npmOutdatedOutput=`npm outdated $PACKAGE`
+
+    regex='([0-9]+\.[0-9]+\.[0-9]+)'
+
+    str=$npmOutdatedOutput
+    [[ $str =~ $regex ]]
+    CURRENT="${BASH_REMATCH[1]}"
+
+    str=${str#*"${BASH_REMATCH[1]}"}
+    [[ $str =~ $regex ]]
+    WANTED="${BASH_REMATCH[1]}"
+
+    str=${str#*"${BASH_REMATCH[1]}"}
+    [[ $str =~ $regex ]]
+    LATEST="${BASH_REMATCH[1]}"
+
+    npm i $PACKAGE@latest && git commit -am "chore(package): update $PACKAGE from v$CURRENT to v$LATEST" && git log -1
+}
+
 alias penv="poetry shell"
 alias venv=". venv/bin/activate"
 alias ldabuild="cd ~/src/lime-dev-app && ./manage.py build-images"

@@ -33,7 +33,8 @@ function npmInstallLatestAndCommit() {
         LATEST="${BASH_REMATCH[1]}"
 
         npm i $PACKAGE@latest
-        git commit -am "chore(package): update $PACKAGE from v$CURRENT to v$LATEST"
+        git add package*.json
+        git commit -m "chore(package): update $PACKAGE from v$CURRENT to v$LATEST"
     done
     git log -${#args[@]}
 }

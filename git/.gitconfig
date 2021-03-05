@@ -8,7 +8,6 @@
     br = branch
     co = checkout
     f = fetch
-    h = log --pretty=format:'%C(yellow)%h%Creset %cd | %s%C(yellow)%d%Creset %C(red)(%an, %cr)%Creset' --graph --date=short
     ignored = !git ls-files -v | grep "^[[:lower:]]"
     po = remote prune origin # Delete all local copies of upstream branches which no longer exist upstream.
     pod = remote prune origin --dry-run
@@ -27,8 +26,8 @@
     a = add -A
 	ds = diff --staged
 	find = log --all --grep
-	hm = log --pretty=\"format:%C(blue)%h%C(yellow) %s %C(green)%an%Creset, %ar%C(red)%d\" --graph master..HEAD
-	hist = log --pretty=\"format:%C(blue)%h%C(yellow) %s %C(green)%an%Creset, %ar%C(red)%d\" --graph
+	hm = log --pretty=\"format:%C(blue)%h%C(yellow) %s %C(green)%an%Creset, %ar%C(red)%d\" --graph main..HEAD
+	h = log --pretty=\"format:%C(blue)%h%C(yellow) %s %C(green)%an%Creset, %ar%C(red)%d\" --graph
 [color]
     ui = always
     diff = always

@@ -13,9 +13,36 @@ alias dprune="d system prune --volumes -f"
 alias npmOutdated="npm outdated"
 
 function npmInstallLatestAndCommit() {
-    args=("$@")
-    for PACKAGE in "${args[@]}"
+    local args=`getopt t:s: $*`
+
+    set -- $args
+
+    for i
     do
+        case "$i"
+        in
+            -t)
+                local TYPE="$2"; shift;
+                shift;;
+            -s)
+                local SCOPE="$2"; shift;
+                shift;;
+            --)
+                shift;
+                local restArgs=("$@");
+                shift; break;;
+        esac
+    done
+
+    local TYPE="${TYPE:-chore}"
+    local SCOPE="${SCOPE:-package}"
+
+    # echo TYPE is "${TYPE}"
+    # echo SCOPE is "${SCOPE}"
+
+    for PACKAGE in "${restArgs[@]}"
+    do
+        # echo "${PACKAGE}"
         npmOutdatedOutput=`npm outdated $PACKAGE`
 
         regex='([0-9]+\.[0-9]+\.[0-9]+)'
@@ -34,9 +61,9 @@ function npmInstallLatestAndCommit() {
 
         npm i $PACKAGE@latest
         git add package*.json
-        git commit -m "chore(package): update $PACKAGE from v$CURRENT to v$LATEST"
+        git commit -m "${TYPE}(${SCOPE}): update $PACKAGE from v$CURRENT to v$LATEST"
     done
-    git log -${#args[@]}
+    git log -${#restArgs[@]}
 }
 
 alias penv="poetry shell"

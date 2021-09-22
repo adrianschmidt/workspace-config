@@ -7,6 +7,7 @@
       "whitespace"
       "github"
       "pigments"
+      "highlight-colors"
     ]
     openEmptyEditorOnStart: false
     packagesWithSnippetsDisabled: [
@@ -14,15 +15,17 @@
     ]
     projectHome: "~/src"
     telemetryConsent: "limited"
+  docblockr:
+    return_description: false
   editor:
     fontFamily: "CenturySchoolbookBT Nerd Font, Menlo, Consolas, DejaVu Sans Mono, monospace"
-    fontSize: 13
     scrollPastEnd: true
     showInvisibles: true
     softWrapAtPreferredLineLength: true
     tabLength: 4
   "exception-reporting":
     userId: "70334d72-d310-4718-a8ef-999ff0e42029"
+  minimap: {}
   "tree-view": {}
   welcome:
     showOnStartup: false

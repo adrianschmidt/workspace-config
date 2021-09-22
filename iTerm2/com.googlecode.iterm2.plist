@@ -7,11 +7,13 @@
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>Command</key>
-	<string></string>
+	<string>/bin/bash</string>
 	<key>CommandSelection</key>
 	<true/>
+	<key>ConservativeURLGuessing</key>
+	<false/>
 	<key>Default Arrangement Name</key>
-	<string>3 process windows</string>
+	<string>1+4</string>
 	<key>Default Bookmark Guid</key>
 	<string>565D831B-B9DA-4962-A2E2-BE1A2FEBCE8B</string>
 	<key>DimBackgroundWindows</key>
@@ -179,15 +181,15 @@
 			<key>AWDS Pane Directory</key>
 			<string></string>
 			<key>AWDS Pane Option</key>
-			<string>No</string>
+			<string>Recycle</string>
 			<key>AWDS Tab Directory</key>
-			<string></string>
+			<string>/Users/adrian.schmidt/src</string>
 			<key>AWDS Tab Option</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>AWDS Window Directory</key>
-			<string></string>
+			<string>/Users/adrian.schmidt/src</string>
 			<key>AWDS Window Option</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Allow Title Setting</key>
 			<true/>
 			<key>Ambiguous Double Width</key>
@@ -395,7 +397,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>Yes</string>
+			<string>Advanced</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -742,11 +744,11 @@
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>editor</string>
+				<string>command</string>
 				<key>editor</key>
 				<string>com.github.atom</string>
 				<key>text</key>
-				<string></string>
+				<string>open \5/\1</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -830,7 +832,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>~/src</string>
+			<string>/Users/adrian.schmidt/src</string>
 		</dict>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
@@ -878,8 +880,6 @@
 	</dict>
 	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
 	<false/>
-	<key>PreventEscapeSequenceFromClearingHistory</key>
-	<false/>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -894,6 +894,8 @@
 	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
+	<key>ShowYellowMarkForJobStoppedBySignal</key>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>StretchTabsToFillBar</key>
@@ -920,7 +922,7 @@
 	<false/>
 	<key>Window Arrangements</key>
 	<dict>
-		<key>3 process windows</key>
+		<key>1+4</key>
 		<array>
 			<dict>
 				<key>Desired Columns</key>
@@ -930,7 +932,7 @@
 				<key>Has Toolbelt</key>
 				<false/>
 				<key>Height</key>
-				<real>559</real>
+				<real>875</real>
 				<key>Hide After Opening</key>
 				<false/>
 				<key>Hiding Toolbelt Should Resize Window</key>
@@ -942,7 +944,9 @@
 				<key>Saved Window Type</key>
 				<integer>13</integer>
 				<key>Screen</key>
-				<integer>1</integer>
+				<integer>0</integer>
+				<key>Scroller Width</key>
+				<real>0.0</real>
 				<key>Selected Tab Index</key>
 				<integer>0</integer>
 				<key>Tabs</key>
@@ -950,6 +954,8 @@
 					<dict>
 						<key>Root</key>
 						<dict>
+							<key>Splitter ID</key>
+							<string>468B960F-5A22-4548-8114-739FF48E4FEC</string>
 							<key>Subviews</key>
 							<array>
 								<dict>
@@ -961,6 +967,20 @@
 										<dict>
 											<key>ASCII Anti Aliased</key>
 											<true/>
+											<key>ASCII Ligatures</key>
+											<false/>
+											<key>AWDS Pane Directory</key>
+											<string></string>
+											<key>AWDS Pane Option</key>
+											<string>No</string>
+											<key>AWDS Tab Directory</key>
+											<string></string>
+											<key>AWDS Tab Option</key>
+											<string>No</string>
+											<key>AWDS Window Directory</key>
+											<string></string>
+											<key>AWDS Window Option</key>
+											<string>No</string>
 											<key>Allow Title Setting</key>
 											<true/>
 											<key>Ambiguous Double Width</key>
@@ -1140,9 +1160,11 @@
 											<key>Close Sessions On End</key>
 											<true/>
 											<key>Columns</key>
-											<integer>80</integer>
+											<integer>120</integer>
 											<key>Command</key>
 											<string>/bin/bash</string>
+											<key>Cursor Boost</key>
+											<real>0.0</real>
 											<key>Cursor Color</key>
 											<dict>
 												<key>Blue Component</key>
@@ -1164,7 +1186,7 @@
 											<key>Cursor Type</key>
 											<integer>1</integer>
 											<key>Custom Command</key>
-											<string>Yes</string>
+											<string>No</string>
 											<key>Custom Directory</key>
 											<string>Yes</string>
 											<key>Default Bookmark</key>
@@ -1192,6 +1214,8 @@
 											<integer>0</integer>
 											<key>Idle Code</key>
 											<integer>0</integer>
+											<key>Initial Text</key>
+											<string>bash</string>
 											<key>Jobs to Ignore</key>
 											<array>
 												<string>rlogin</string>
@@ -1508,6 +1532,15 @@
 												<key>Red Component</key>
 												<real>0.70980000495910645</real>
 											</dict>
+											<key>Semantic History</key>
+											<dict>
+												<key>action</key>
+												<string>editor</string>
+												<key>editor</key>
+												<string>com.github.atom</string>
+												<key>text</key>
+												<string></string>
+											</dict>
 											<key>Send Code When Idle</key>
 											<false/>
 											<key>Shortcut</key>
@@ -1567,6 +1600,8 @@
 											<array/>
 											<key>Terminal Type</key>
 											<string>xterm-256color</string>
+											<key>Thin Strokes</key>
+											<integer>4</integer>
 											<key>Title Components</key>
 											<integer>1</integer>
 											<key>Transparency</key>
@@ -1591,7 +1626,7 @@
 											<string>~/src</string>
 										</dict>
 										<key>Columns</key>
-										<integer>66</integer>
+										<integer>88</integer>
 										<key>Commands</key>
 										<array>
 											<string>git s</string>
@@ -1638,7 +1673,7 @@
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>~/src/workspace-config</string>
+											<string>/Users/ads/src</string>
 										</dict>
 										<key>Hosts</key>
 										<array>
@@ -1771,6 +1806,8 @@
 										</array>
 										<key>Is UTF-8</key>
 										<true/>
+										<key>Key Labels</key>
+										<dict/>
 										<key>Name Controller State</key>
 										<dict>
 											<key>icon title stack</key>
@@ -1784,17 +1821,19 @@
 											<string>Shell Launcher</string>
 										</dict>
 										<key>Rows</key>
-										<integer>31</integer>
+										<integer>50</integer>
 										<key>Session GUID</key>
 										<string>C96BCF44-8D65-4A57-82C7-8E8F6F25F995</string>
-										<key>Shell Integration Ever Used</key>
-										<true/>
 										<key>Short Lived Single Use</key>
 										<false/>
+										<key>Should Expect Current Dir Updates</key>
+										<true/>
+										<key>Should Expect Prompt Marks</key>
+										<true/>
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/ads/src</string>
+										<string>/</string>
 										<key>Working Directory Poller Disabled</key>
 										<true/>
 									</dict>
@@ -1803,9 +1842,9 @@
 									<key>frame</key>
 									<dict>
 										<key>height</key>
-										<real>500</real>
+										<real>816</real>
 										<key>width</key>
-										<real>539</real>
+										<real>717</real>
 										<key>x</key>
 										<real>0.0</real>
 										<key>y</key>
@@ -1813,6 +1852,8 @@
 									</dict>
 								</dict>
 								<dict>
+									<key>Splitter ID</key>
+									<string>4564ED4C-4E4B-492B-952B-1797A451B015</string>
 									<key>Subviews</key>
 									<array>
 										<dict>
@@ -1824,6 +1865,20 @@
 												<dict>
 													<key>ASCII Anti Aliased</key>
 													<true/>
+													<key>ASCII Ligatures</key>
+													<false/>
+													<key>AWDS Pane Directory</key>
+													<string></string>
+													<key>AWDS Pane Option</key>
+													<string>No</string>
+													<key>AWDS Tab Directory</key>
+													<string></string>
+													<key>AWDS Tab Option</key>
+													<string>No</string>
+													<key>AWDS Window Directory</key>
+													<string></string>
+													<key>AWDS Window Option</key>
+													<string>No</string>
 													<key>Allow Title Setting</key>
 													<true/>
 													<key>Ambiguous Double Width</key>
@@ -2003,9 +2058,11 @@
 													<key>Close Sessions On End</key>
 													<true/>
 													<key>Columns</key>
-													<integer>80</integer>
+													<integer>120</integer>
 													<key>Command</key>
 													<string>/bin/bash</string>
+													<key>Cursor Boost</key>
+													<real>0.0</real>
 													<key>Cursor Color</key>
 													<dict>
 														<key>Blue Component</key>
@@ -2027,7 +2084,7 @@
 													<key>Cursor Type</key>
 													<integer>1</integer>
 													<key>Custom Command</key>
-													<string>Yes</string>
+													<string>No</string>
 													<key>Custom Directory</key>
 													<string>Yes</string>
 													<key>Default Bookmark</key>
@@ -2055,6 +2112,8 @@
 													<integer>0</integer>
 													<key>Idle Code</key>
 													<integer>0</integer>
+													<key>Initial Text</key>
+													<string>bash</string>
 													<key>Jobs to Ignore</key>
 													<array>
 														<string>rlogin</string>
@@ -2371,6 +2430,15 @@
 														<key>Red Component</key>
 														<real>0.70980000495910645</real>
 													</dict>
+													<key>Semantic History</key>
+													<dict>
+														<key>action</key>
+														<string>editor</string>
+														<key>editor</key>
+														<string>com.github.atom</string>
+														<key>text</key>
+														<string></string>
+													</dict>
 													<key>Send Code When Idle</key>
 													<false/>
 													<key>Shortcut</key>
@@ -2430,6 +2498,8 @@
 													<array/>
 													<key>Terminal Type</key>
 													<string>xterm-256color</string>
+													<key>Thin Strokes</key>
+													<integer>4</integer>
 													<key>Title Components</key>
 													<integer>1</integer>
 													<key>Transparency</key>
@@ -2454,7 +2524,7 @@
 													<string>~/src</string>
 												</dict>
 												<key>Columns</key>
-												<integer>66</integer>
+												<integer>89</integer>
 												<key>Commands</key>
 												<array/>
 												<key>Directories</key>
@@ -2467,7 +2537,7 @@
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>~/src</string>
+													<string>/Users/adrian.schmidt/src</string>
 												</dict>
 												<key>Hosts</key>
 												<array>
@@ -2498,6 +2568,8 @@
 												</array>
 												<key>Is UTF-8</key>
 												<true/>
+												<key>Key Labels</key>
+												<dict/>
 												<key>Name Controller State</key>
 												<dict>
 													<key>icon title stack</key>
@@ -2511,17 +2583,19 @@
 													<string>Shell Launcher</string>
 												</dict>
 												<key>Rows</key>
-												<integer>14</integer>
+												<integer>24</integer>
 												<key>Session GUID</key>
 												<string>441CBADC-8DD0-4B7F-AEA5-D20A03BBE9E1</string>
-												<key>Shell Integration Ever Used</key>
-												<true/>
 												<key>Short Lived Single Use</key>
 												<false/>
+												<key>Should Expect Current Dir Updates</key>
+												<true/>
+												<key>Should Expect Prompt Marks</key>
+												<true/>
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/ads/src</string>
+												<string>/Users/adrian.schmidt/src</string>
 												<key>Working Directory Poller Disabled</key>
 												<true/>
 											</dict>
@@ -2530,9 +2604,9 @@
 											<key>frame</key>
 											<dict>
 												<key>height</key>
-												<real>229</real>
+												<real>388</real>
 												<key>width</key>
-												<real>540</real>
+												<real>722</real>
 												<key>x</key>
 												<real>0.0</real>
 												<key>y</key>
@@ -2548,6 +2622,20 @@
 												<dict>
 													<key>ASCII Anti Aliased</key>
 													<true/>
+													<key>ASCII Ligatures</key>
+													<false/>
+													<key>AWDS Pane Directory</key>
+													<string></string>
+													<key>AWDS Pane Option</key>
+													<string>No</string>
+													<key>AWDS Tab Directory</key>
+													<string></string>
+													<key>AWDS Tab Option</key>
+													<string>No</string>
+													<key>AWDS Window Directory</key>
+													<string></string>
+													<key>AWDS Window Option</key>
+													<string>No</string>
 													<key>Allow Title Setting</key>
 													<true/>
 													<key>Ambiguous Double Width</key>
@@ -2727,9 +2815,11 @@
 													<key>Close Sessions On End</key>
 													<true/>
 													<key>Columns</key>
-													<integer>80</integer>
+													<integer>120</integer>
 													<key>Command</key>
 													<string>/bin/bash</string>
+													<key>Cursor Boost</key>
+													<real>0.0</real>
 													<key>Cursor Color</key>
 													<dict>
 														<key>Blue Component</key>
@@ -2751,7 +2841,7 @@
 													<key>Cursor Type</key>
 													<integer>1</integer>
 													<key>Custom Command</key>
-													<string>Yes</string>
+													<string>No</string>
 													<key>Custom Directory</key>
 													<string>Yes</string>
 													<key>Default Bookmark</key>
@@ -2779,6 +2869,8 @@
 													<integer>0</integer>
 													<key>Idle Code</key>
 													<integer>0</integer>
+													<key>Initial Text</key>
+													<string>bash</string>
 													<key>Jobs to Ignore</key>
 													<array>
 														<string>rlogin</string>
@@ -3095,6 +3187,15 @@
 														<key>Red Component</key>
 														<real>0.70980000495910645</real>
 													</dict>
+													<key>Semantic History</key>
+													<dict>
+														<key>action</key>
+														<string>editor</string>
+														<key>editor</key>
+														<string>com.github.atom</string>
+														<key>text</key>
+														<string></string>
+													</dict>
 													<key>Send Code When Idle</key>
 													<false/>
 													<key>Shortcut</key>
@@ -3154,6 +3255,8 @@
 													<array/>
 													<key>Terminal Type</key>
 													<string>xterm-256color</string>
+													<key>Thin Strokes</key>
+													<integer>4</integer>
 													<key>Title Components</key>
 													<integer>1</integer>
 													<key>Transparency</key>
@@ -3178,7 +3281,7 @@
 													<string>~/src</string>
 												</dict>
 												<key>Columns</key>
-												<integer>66</integer>
+												<integer>89</integer>
 												<key>Commands</key>
 												<array/>
 												<key>Directories</key>
@@ -3191,7 +3294,7 @@
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>~/src</string>
+													<string>/Users/adrian.schmidt/src</string>
 												</dict>
 												<key>Hosts</key>
 												<array>
@@ -3222,6 +3325,8 @@
 												</array>
 												<key>Is UTF-8</key>
 												<true/>
+												<key>Key Labels</key>
+												<dict/>
 												<key>Name Controller State</key>
 												<dict>
 													<key>icon title stack</key>
@@ -3235,17 +3340,19 @@
 													<string>Shell Launcher</string>
 												</dict>
 												<key>Rows</key>
-												<integer>5</integer>
+												<integer>8</integer>
 												<key>Session GUID</key>
 												<string>C3BC3EBD-7083-45E4-8C2A-002D16AAE938</string>
-												<key>Shell Integration Ever Used</key>
-												<true/>
 												<key>Short Lived Single Use</key>
 												<false/>
+												<key>Should Expect Current Dir Updates</key>
+												<true/>
+												<key>Should Expect Prompt Marks</key>
+												<true/>
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/ads/src</string>
+												<string>/Users/adrian.schmidt/src</string>
 												<key>Working Directory Poller Disabled</key>
 												<true/>
 											</dict>
@@ -3254,13 +3361,13 @@
 											<key>frame</key>
 											<dict>
 												<key>height</key>
-												<real>84</real>
+												<real>136</real>
 												<key>width</key>
-												<real>540</real>
+												<real>722</real>
 												<key>x</key>
 												<real>0.0</real>
 												<key>y</key>
-												<real>230</real>
+												<real>389</real>
 											</dict>
 										</dict>
 										<dict>
@@ -3272,6 +3379,20 @@
 												<dict>
 													<key>ASCII Anti Aliased</key>
 													<true/>
+													<key>ASCII Ligatures</key>
+													<false/>
+													<key>AWDS Pane Directory</key>
+													<string></string>
+													<key>AWDS Pane Option</key>
+													<string>No</string>
+													<key>AWDS Tab Directory</key>
+													<string></string>
+													<key>AWDS Tab Option</key>
+													<string>No</string>
+													<key>AWDS Window Directory</key>
+													<string></string>
+													<key>AWDS Window Option</key>
+													<string>No</string>
 													<key>Allow Title Setting</key>
 													<true/>
 													<key>Ambiguous Double Width</key>
@@ -3451,9 +3572,11 @@
 													<key>Close Sessions On End</key>
 													<true/>
 													<key>Columns</key>
-													<integer>80</integer>
+													<integer>120</integer>
 													<key>Command</key>
 													<string>/bin/bash</string>
+													<key>Cursor Boost</key>
+													<real>0.0</real>
 													<key>Cursor Color</key>
 													<dict>
 														<key>Blue Component</key>
@@ -3475,7 +3598,7 @@
 													<key>Cursor Type</key>
 													<integer>1</integer>
 													<key>Custom Command</key>
-													<string>Yes</string>
+													<string>No</string>
 													<key>Custom Directory</key>
 													<string>Yes</string>
 													<key>Default Bookmark</key>
@@ -3503,6 +3626,8 @@
 													<integer>0</integer>
 													<key>Idle Code</key>
 													<integer>0</integer>
+													<key>Initial Text</key>
+													<string>bash</string>
 													<key>Jobs to Ignore</key>
 													<array>
 														<string>rlogin</string>
@@ -3819,6 +3944,15 @@
 														<key>Red Component</key>
 														<real>0.70980000495910645</real>
 													</dict>
+													<key>Semantic History</key>
+													<dict>
+														<key>action</key>
+														<string>editor</string>
+														<key>editor</key>
+														<string>com.github.atom</string>
+														<key>text</key>
+														<string></string>
+													</dict>
 													<key>Send Code When Idle</key>
 													<false/>
 													<key>Shortcut</key>
@@ -3878,6 +4012,8 @@
 													<array/>
 													<key>Terminal Type</key>
 													<string>xterm-256color</string>
+													<key>Thin Strokes</key>
+													<integer>4</integer>
 													<key>Title Components</key>
 													<integer>1</integer>
 													<key>Transparency</key>
@@ -3902,7 +4038,7 @@
 													<string>~/src</string>
 												</dict>
 												<key>Columns</key>
-												<integer>66</integer>
+												<integer>89</integer>
 												<key>Commands</key>
 												<array/>
 												<key>Directories</key>
@@ -3915,7 +4051,7 @@
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>~/src</string>
+													<string>/Users/adrian.schmidt/src</string>
 												</dict>
 												<key>Hostname to Shell</key>
 												<dict>
@@ -3951,6 +4087,8 @@
 												</array>
 												<key>Is UTF-8</key>
 												<true/>
+												<key>Key Labels</key>
+												<dict/>
 												<key>Name Controller State</key>
 												<dict>
 													<key>icon title stack</key>
@@ -3964,17 +4102,19 @@
 													<string>Shell Launcher</string>
 												</dict>
 												<key>Rows</key>
-												<integer>5</integer>
+												<integer>8</integer>
 												<key>Session GUID</key>
 												<string>1A915FD1-B039-47AB-A454-988203FFEC1B</string>
-												<key>Shell Integration Ever Used</key>
-												<true/>
 												<key>Short Lived Single Use</key>
 												<false/>
+												<key>Should Expect Current Dir Updates</key>
+												<true/>
+												<key>Should Expect Prompt Marks</key>
+												<true/>
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/ads/src</string>
+												<string>/Users/adrian.schmidt/src</string>
 												<key>Working Directory Poller Disabled</key>
 												<true/>
 											</dict>
@@ -3983,13 +4123,13 @@
 											<key>frame</key>
 											<dict>
 												<key>height</key>
-												<real>84</real>
+												<real>136</real>
 												<key>width</key>
-												<real>540</real>
+												<real>722</real>
 												<key>x</key>
 												<real>0.0</real>
 												<key>y</key>
-												<real>315</real>
+												<real>526</real>
 											</dict>
 										</dict>
 										<dict>
@@ -4001,6 +4141,20 @@
 												<dict>
 													<key>ASCII Anti Aliased</key>
 													<true/>
+													<key>ASCII Ligatures</key>
+													<false/>
+													<key>AWDS Pane Directory</key>
+													<string></string>
+													<key>AWDS Pane Option</key>
+													<string>No</string>
+													<key>AWDS Tab Directory</key>
+													<string></string>
+													<key>AWDS Tab Option</key>
+													<string>No</string>
+													<key>AWDS Window Directory</key>
+													<string></string>
+													<key>AWDS Window Option</key>
+													<string>No</string>
 													<key>Allow Title Setting</key>
 													<true/>
 													<key>Ambiguous Double Width</key>
@@ -4180,9 +4334,11 @@
 													<key>Close Sessions On End</key>
 													<true/>
 													<key>Columns</key>
-													<integer>80</integer>
+													<integer>120</integer>
 													<key>Command</key>
 													<string>/bin/bash</string>
+													<key>Cursor Boost</key>
+													<real>0.0</real>
 													<key>Cursor Color</key>
 													<dict>
 														<key>Blue Component</key>
@@ -4204,7 +4360,7 @@
 													<key>Cursor Type</key>
 													<integer>1</integer>
 													<key>Custom Command</key>
-													<string>Yes</string>
+													<string>No</string>
 													<key>Custom Directory</key>
 													<string>Yes</string>
 													<key>Default Bookmark</key>
@@ -4232,6 +4388,8 @@
 													<integer>0</integer>
 													<key>Idle Code</key>
 													<integer>0</integer>
+													<key>Initial Text</key>
+													<string>bash</string>
 													<key>Jobs to Ignore</key>
 													<array>
 														<string>rlogin</string>
@@ -4548,6 +4706,15 @@
 														<key>Red Component</key>
 														<real>0.70980000495910645</real>
 													</dict>
+													<key>Semantic History</key>
+													<dict>
+														<key>action</key>
+														<string>editor</string>
+														<key>editor</key>
+														<string>com.github.atom</string>
+														<key>text</key>
+														<string></string>
+													</dict>
 													<key>Send Code When Idle</key>
 													<false/>
 													<key>Shortcut</key>
@@ -4607,6 +4774,8 @@
 													<array/>
 													<key>Terminal Type</key>
 													<string>xterm-256color</string>
+													<key>Thin Strokes</key>
+													<integer>4</integer>
 													<key>Title Components</key>
 													<integer>1</integer>
 													<key>Transparency</key>
@@ -4631,7 +4800,7 @@
 													<string>~/src</string>
 												</dict>
 												<key>Columns</key>
-												<integer>66</integer>
+												<integer>89</integer>
 												<key>Commands</key>
 												<array/>
 												<key>Directories</key>
@@ -4644,7 +4813,7 @@
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>~/src</string>
+													<string>/Users/adrian.schmidt/src</string>
 												</dict>
 												<key>Hosts</key>
 												<array>
@@ -4675,6 +4844,8 @@
 												</array>
 												<key>Is UTF-8</key>
 												<true/>
+												<key>Key Labels</key>
+												<dict/>
 												<key>Name Controller State</key>
 												<dict>
 													<key>icon title stack</key>
@@ -4688,17 +4859,19 @@
 													<string>Shell Launcher</string>
 												</dict>
 												<key>Rows</key>
-												<integer>6</integer>
+												<integer>9</integer>
 												<key>Session GUID</key>
 												<string>3C7F305C-FB55-4E27-AE3A-63CD1D74C812</string>
-												<key>Shell Integration Ever Used</key>
-												<true/>
 												<key>Short Lived Single Use</key>
 												<false/>
+												<key>Should Expect Current Dir Updates</key>
+												<true/>
+												<key>Should Expect Prompt Marks</key>
+												<true/>
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/ads/src</string>
+												<string>/Users/adrian.schmidt/src</string>
 												<key>Working Directory Poller Disabled</key>
 												<true/>
 											</dict>
@@ -4707,13 +4880,13 @@
 											<key>frame</key>
 											<dict>
 												<key>height</key>
-												<real>100</real>
+												<real>153</real>
 												<key>width</key>
-												<real>540</real>
+												<real>722</real>
 												<key>x</key>
 												<real>0.0</real>
 												<key>y</key>
-												<real>400</real>
+												<real>663</real>
 											</dict>
 										</dict>
 									</array>
@@ -4722,11 +4895,11 @@
 									<key>frame</key>
 									<dict>
 										<key>height</key>
-										<real>500</real>
+										<real>816</real>
 										<key>width</key>
-										<real>540</real>
+										<real>722</real>
 										<key>x</key>
-										<real>540</real>
+										<real>718</real>
 										<key>y</key>
 										<real>0.0</real>
 									</dict>
@@ -4739,9 +4912,9 @@
 							<key>frame</key>
 							<dict>
 								<key>height</key>
-								<real>500</real>
+								<real>816</real>
 								<key>width</key>
-								<real>1080</real>
+								<real>1440</real>
 								<key>x</key>
 								<real>0.0</real>
 								<key>y</key>
@@ -4750,10 +4923,25 @@
 							<key>isVertical</key>
 							<true/>
 						</dict>
+						<key>Tab GUID</key>
+						<string>6BDA26D0-F537-4706-A2EE-025D38778277</string>
 					</dict>
 				</array>
 				<key>TerminalGuid</key>
 				<string>pty-6AA0D585-280F-4D4B-BF5D-F7FCC8BE592B</string>
+				<key>Toolbelt</key>
+				<dict>
+					<key>Profiles</key>
+					<dict>
+						<key>iTermToolProfilesProfileListViewState</key>
+						<dict>
+							<key>iTermProfileListViewRestorableStateTagsFraction</key>
+							<real>0.0</real>
+							<key>iTermProfileListViewRestorableStateTagsVisible</key>
+							<false/>
+						</dict>
+					</dict>
+				</dict>
 				<key>Toolbelt Proportions</key>
 				<dict>
 					<key>proportions</key>
@@ -4769,13 +4957,13 @@
 				<key>Use Transparency</key>
 				<true/>
 				<key>Width</key>
-				<real>1080</real>
+				<real>1440</real>
 				<key>Window Type</key>
 				<integer>13</integer>
 				<key>X Origin</key>
-				<real>-1080</real>
+				<real>0.0</real>
 				<key>Y Origin</key>
-				<real>1045</real>
+				<real>0.0</real>
 			</dict>
 		</array>
 		<key>Default Arrangement</key>

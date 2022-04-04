@@ -30,6 +30,7 @@
 	hu = h HEAD..@{u}
 	ulog = log HEAD..@{u}
 	hb = h beta..HEAD
+	amend = commit --amend -S
 [color]
     ui = always
     diff = always

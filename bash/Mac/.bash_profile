@@ -103,3 +103,8 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 # Created by `pipx` on 2021-08-18 07:29:09
 export PATH="$PATH:/Users/adrian.schmidt/.local/bin"
+
+# Setup for `nvm` (node version manager)
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

@@ -1,4 +1,7 @@
 "*":
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnType: false
   "atom-typescript": {}
   core:
     allowPendingPaneItems: false

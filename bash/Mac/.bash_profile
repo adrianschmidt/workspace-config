@@ -99,10 +99,10 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
-export PATH="$HOME/.poetry/bin:$PATH"
-
 # Created by `pipx` on 2021-08-18 07:29:09
 export PATH="$PATH:/Users/adrian.schmidt/.local/bin"
+
+# export PATH="$HOME/.poetry/bin:$PATH"
 
 # Setup for `nvm` (node version manager)
 export NVM_DIR="$HOME/.nvm"

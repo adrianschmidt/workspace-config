@@ -76,7 +76,7 @@ alias ldaupdatewithcore="pip uninstall -y lime-core lime-webclient && pip instal
 alias ldarunimport="celery worker --app lime_import.task.app -P solo"
 
 alias wcrun="poetry run flask run"
-alias wcrundebug="FLASK_ENV=development poetry run flask run"
+alias wcrundebug="FLASK_DEBUG=true poetry run flask run"
 alias wcrunimport="poetry run celery --app lime_import.task.app worker -P solo"
 
 alias awsLogin="aws sso login --profile sharedecr"

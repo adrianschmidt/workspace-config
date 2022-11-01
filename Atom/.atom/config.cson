@@ -12,6 +12,11 @@
       "pigments"
       "highlight-colors"
     ]
+    ignoredNames: [
+      ".git"
+      ".venv"
+      "dist"
+    ]
     openEmptyEditorOnStart: false
     packagesWithSnippetsDisabled: [
       "atom-typescript"

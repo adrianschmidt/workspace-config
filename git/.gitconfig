@@ -31,6 +31,7 @@
 	ulog = log HEAD..@{u}
 	hb = h beta..HEAD
 	amend = commit --amend -S
+	fetchNotes = fetch origin refs/notes/*:refs/notes/*
 [color]
     ui = always
     diff = always

@@ -84,7 +84,7 @@ alias awsLogin="aws sso login --profile sharedecr"
 alias lint="npm run lint"
 alias lintf="npm run lint:fix"
 
-alias wcinstallbuild="cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/webclient && npm i && npm run build && cd ../admin && npm i && npm run build"
+alias wcinstallbuild="cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/webclient && npm i && npm run build && cd ../admin && npm i && npm run build && cd ~/src/lime-webclient/"
 alias wcinstallbuildall="cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/importer && npm i && npm run build && cd ../new-webclient && npm i && npm run build && cd ../webclient && npm i && npm run build && cd ../admin && npm i && npm run build"
 alias wcupdatepip="poetry run python -m pip install --upgrade pip"
 alias buildWC="cd ~/src/lime-webclient/frontend/webclient && npm run build"

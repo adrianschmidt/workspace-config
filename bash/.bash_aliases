@@ -12,6 +12,12 @@ alias dprune="d system prune --volumes -f"
 
 alias npmOutdated="npm outdated"
 
+function llClone() {
+    cd ~/src/
+    git clone git@github.com:Lundalogik/$1.git
+    cd $1
+}
+
 function npmInstallLatestAndCommit() {
     local args=`getopt t:s: $*`
 

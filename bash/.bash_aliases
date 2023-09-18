@@ -91,8 +91,11 @@ alias lint="npm run lint"
 alias lintf="npm run lint:fix"
 
 alias wcinstallbuild="cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/webclient && npm i && npm run build && cd ../admin && npm i && npm run build && cd ~/src/lime-webclient/"
-alias wcinstallbuildall="cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/importer && npm i && npm run build && cd ../new-webclient && npm i && npm run build && cd ../webclient && npm i && npm run build && cd ../admin && npm i && npm run build"
+alias wcinstallbuildall="cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/importer && npm i && npm run build && cd ../new-webclient && npm i && npm run build && cd ../webclient && npm i && npm run build && cd ../admin && npm i && npm run build && cd ~/src/lime-webclient/"
 alias wcupdatepip="poetry run python -m pip install --upgrade pip"
+alias wcteardown="cd ~/src/lime-webclient/ && dc down && dprune && rm -rf .venv"
 alias buildWC="cd ~/src/lime-webclient/frontend/webclient && npm run build"
 alias buildCC="cd ~/src/lime-crm-components && npm run build"
 alias buildLE="cd ~/src/lime-elements && npm run build"
+
+alias black="poetry run black . && poetry run isort . --profile=black"

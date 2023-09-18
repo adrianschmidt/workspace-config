@@ -12,13 +12,13 @@
     po = remote prune origin # Delete all local copies of upstream branches which no longer exist upstream.
     pod = remote prune origin --dry-run
     praise = blame
-    r = rebase -S
+    r = rebase
     s = status
     pf = push --force-with-lease
     p = push
-    cp = cherry-pick -S
-    cm = cz -S
-    cmm = commit -S -m
+    cp = cherry-pick
+    cm = cz
+    cmm = commit -m
     rc = rebase --continue
     fix = commit --fixup
     d = diff
@@ -30,7 +30,7 @@
 	hu = h HEAD..@{u}
 	ulog = log HEAD..@{u}
 	hb = h beta..HEAD
-	amend = commit --amend -S
+	amend = commit --amend
 	fetchNotes = fetch origin refs/notes/*:refs/notes/*
 [color]
     ui = always
@@ -64,3 +64,5 @@
 	program = gpg
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true

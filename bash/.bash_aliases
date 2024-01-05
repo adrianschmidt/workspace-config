@@ -14,8 +14,10 @@ alias npmOutdated="npm outdated"
 
 function llClone() {
     cd ~/src/
-    git clone git@github.com:Lundalogik/$1.git
-    cd $1
+    repo_name="$1"
+    target_folder="${2:-$repo_name}"  # Use the provided folder argument or default to repo_name
+    git clone git@github.com:Lundalogik/"$repo_name".git "$target_folder"
+    cd "$target_folder"
 }
 
 function npmInstallLatestAndCommit() {

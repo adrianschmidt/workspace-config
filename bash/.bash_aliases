@@ -91,6 +91,7 @@ alias awsLogin="aws sso login --profile sharedecr"
 
 alias lint="npm run lint"
 alias lintf="npm run lint:fix"
+alias lintpy="poetry run black . && poetry run isort . --profile=black"
 
 alias wcinstallbuild="cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/webclient && npm i && npm run build && cd ../admin && npm i && npm run build && cd ~/src/lime-webclient/"
 alias wcinstallbuildall="cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/importer && nvm use && npm i && npm run build && cd ../webclient && nvm use && npm i && npm run build && cd ../admin && npm i && npm run build && cd ~/src/lime-webclient/"
@@ -99,5 +100,3 @@ alias wcteardown="cd ~/src/lime-webclient/ && dc down && dprune && rm -rf .venv"
 alias buildWC="cd ~/src/lime-webclient/frontend/webclient && npm run build"
 alias buildCC="cd ~/src/lime-crm-components && npm run build"
 alias buildLE="cd ~/src/lime-elements && npm run build"
-
-alias black="poetry run black . && poetry run isort . --profile=black"

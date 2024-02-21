@@ -102,8 +102,27 @@ function with_openai_api_key() {
   OPENAI_API_KEY=$( security find-generic-password -a rubenpauladrian@gmail.com -s openai_api_token -w ) $*
 }
 
+export PIP_REQUIRE_VIRTUALENV=true
+
+# --- BEGIN load alias definitions ---
+# You may want to put all your additions into a separate file like
+# ~/.zsh_aliases, instead of adding them here directly.
+
+# Since pure aliases are compatible between bash and zsh, we can use the same
+# file regardless of the shell. We load .bash_aliases first, just in case there
+# are any overrides in .zsh_aliases.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
+fi
+# --- END load alias definitions ---
+
+# Functions are not as compatible between bash and zsh, so we keep those in
+# separate files.
+if [ -f ~/.zsh_functions ]; then
+    . ~/.zsh_functions
 fi
 
 # Created by `userpath` on 2020-09-29 13:23:09

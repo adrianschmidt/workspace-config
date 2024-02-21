@@ -1,0 +1,58 @@
+function llClone() {
+    cd ~/src/
+    repo_name="$1"
+    target_folder="${2:-$repo_name}"  # Use the provided folder argument or default to repo_name
+    git clone git@github.com:Lundalogik/"$repo_name".git "$target_folder"
+    cd "$target_folder"
+}
+
+function npmInstallLatestAndCommit() {
+    # Use getopt to parse options
+    local args=$(getopt t:s: $*)
+    set -- $args
+
+    for i; do
+        case "$i" in
+            -t)
+                local TYPE="$2"; shift 2;;
+            -s)
+                local SCOPE="$2"; shift 2;;
+            --)
+                shift; break;;
+        esac
+    done
+
+    local TYPE="${TYPE:-chore}"
+    local SCOPE="${SCOPE:-package}"
+    local restArgs=("$@")
+
+    for PACKAGE in "${restArgs[@]}"; do
+        local npmOutdatedOutput=$(npm outdated $PACKAGE)
+
+        # Zsh regex matching with capture groups
+        local regex='([0-9]+\.[0-9]+\.[0-9]+)'
+        local CURRENT WANTED LATEST
+
+        # Match CURRENT version
+        [[ $npmOutdatedOutput =~ $regex ]]
+        CURRENT=$match[1]
+
+        # Extract and match WANTED version
+        local postCurrent=${npmOutdatedOutput#*$CURRENT}
+        [[ $postCurrent =~ $regex ]]
+        WANTED=$match[1]
+
+        # Extract and match LATEST version
+        local postWanted=${postCurrent#*$WANTED}
+        [[ $postWanted =~ $regex ]]
+        LATEST=$match[1]
+
+        # Install latest package version and commit changes
+        npm i $PACKAGE@latest
+        git add package*.json
+        git commit -m "${TYPE}(${SCOPE}): update $PACKAGE from v$CURRENT to v$LATEST"
+    done
+
+    # Display git log for the number of updated packages
+    git log -${#restArgs[@]}
+}

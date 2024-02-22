@@ -146,3 +146,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/adrian.schmidt/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# Created by `pipx` on 2024-02-22 07:45:30
+export PATH="$PATH:/Users/adrian.schmidt/.local/bin"

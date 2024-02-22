@@ -7,7 +7,7 @@
 [alias]
     br = branch
     co = checkout
-    f = fetch
+    f = fetch --prune # Fetch all remotes and prune deleted branches.
     ignored = !git ls-files -v | grep "^[[:lower:]]"
     po = remote prune origin # Delete all local copies of upstream branches which no longer exist upstream.
     pod = remote prune origin --dry-run

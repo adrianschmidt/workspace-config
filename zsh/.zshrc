@@ -139,6 +139,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # Enable zsh's tab completion system
 # Source: https://scriptingosx.com/2019/07/moving-to-zsh-part-5-completions/
 autoload -Uz compinit && compinit
+autoload -Uz bashcompinit && bashcompinit
 
 # Load the homebrew command line tools
 eval "$(/opt/homebrew/bin/brew shellenv)"

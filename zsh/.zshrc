@@ -101,6 +101,9 @@ function parse_git_branch_status {
 function with_githubtoken() {
   GITHUB_TOKEN=$( security find-generic-password -a adrianschmidt -s githubtoken -w ) $*
 }
+function with_npmtoken() {
+  NPM_TOKEN=$( security find-generic-password -a specularrain -s npmtoken -w ) $*
+}
 function with_openai_api_key() {
   OPENAI_API_KEY=$( security find-generic-password -a rubenpauladrian@gmail.com -s openai_api_token -w ) $*
 }

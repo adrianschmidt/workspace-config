@@ -144,6 +144,10 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 
+# Autocomplete `cd ..` to `cd ../`
+# Source: https://stackoverflow.com/a/716926/280972
+zstyle ':completion:*' special-dirs true
+
 # Load the homebrew command line tools
 eval "$(/opt/homebrew/bin/brew shellenv)"
 

@@ -1,10 +1,3 @@
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init --path)"
-fi
-eval "$(pyenv init -)"
-
 # --- START Prompt Configuration ---
 # Define a variable to hold the dynamic part of the prompt
 git_prompt=""
@@ -163,3 +156,11 @@ export PATH="$PATH:/Users/adrian.schmidt/.local/bin"
 # Since we install is manually, we need to tell Puppeteer to skip the download.
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+
+# Set up pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init --path)"
+fi
+eval "$(pyenv init -)"

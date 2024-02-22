@@ -1,7 +1,4 @@
 # --- START Prompt Configuration ---
-# Define a variable to hold the dynamic part of the prompt
-git_prompt=""
-
 # Update git_prompt before showing each prompt
 precmd() {
   git_prompt=$(get_git_prompt)

@@ -136,3 +136,7 @@ autoload -Uz compinit && compinit
 
 # Load the homebrew command line tools
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/adrian.schmidt/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

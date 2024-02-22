@@ -748,7 +748,7 @@
 				<key>editor</key>
 				<string>com.github.atom</string>
 				<key>text</key>
-				<string>open \5/\1</string>
+				<string>open \1</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>

@@ -1,11 +1,18 @@
 # --- START Prompt Configuration ---
-# Update git_prompt before showing each prompt
+# Update git_prompt and conda_prompt before showing each prompt
 precmd() {
   git_prompt=$(get_git_prompt)
+  conda_prompt=$(get_conda_env)
 
-  # Set the PROMPT with a reference to the git_prompt variable
-  PROMPT="%F{magenta}╭ %f%F{yellow}%*%f %~ ${git_prompt}
+  # Dynamically build the PROMPT based on conda_prompt content
+  if [[ -n $conda_prompt ]]; then
+    PROMPT="${conda_prompt}
+%F{magenta}╭ %f%F{yellow}%*%f %~ ${git_prompt}
 %F{magenta}╰ %f%# "
+  else
+    PROMPT="%F{magenta}╭ %f%F{yellow}%*%f %~ ${git_prompt}
+%F{magenta}╰ %f%# "
+  fi
 }
 
 function get_git_prompt {
@@ -80,7 +87,6 @@ function parse_git_branch_status {
     echo "%F{blue}%f" # Branch is behind
   fi
 }
-
 # --- END Prompt Configuration ---
 
 # Tokens
@@ -171,6 +177,15 @@ unset __conda_setup
 # Deactivate the base conda environment
 conda deactivate
 # <<< conda initialize <<<
+
+# Function to get the current active conda environment name
+get_conda_env() {
+  # Uses `jq`. Install with `brew install jq` or `sudo apt-get install jq`
+  local env_name=$(conda info --envs --json | jq -r '.active_prefix_name // empty')
+  if [[ -n $env_name ]]; then
+    echo "($env_name)"
+  fi
+}
 
 # Set up pyenv
 export PYENV_ROOT="$HOME/.pyenv"

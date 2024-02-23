@@ -8,7 +8,7 @@ alias d=docker
 alias dc=docker-compose
 alias dprune="d system prune --volumes -f"
 
-alias npmOutdated="npm outdated"
+alias npmOutdated="with_githubtoken npm outdated"
 
 alias penv="poetry shell"
 alias venv=". venv/bin/activate"
@@ -29,8 +29,8 @@ alias lint="npm run lint"
 alias lintf="npm run lint:fix"
 alias lintpy="poetry run black . && poetry run isort . --profile=black"
 
-alias wcinstallbuild="cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/webclient && npm i && npm run build && cd ../admin && npm i && npm run build && cd ~/src/lime-webclient/"
-alias wcinstallbuildall="cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/importer && nvm use && npm i && npm run build && cd ../webclient && nvm use && npm i && npm run build && cd ../admin && npm i && npm run build && cd ~/src/lime-webclient/"
+alias wcinstallbuild="with_githubtoken cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/webclient && npm i && npm run build && cd ../admin && npm i && npm run build && cd ~/src/lime-webclient/"
+alias wcinstallbuildall="with_githubtoken cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/importer && nvm use && npm i && npm run build && cd ../webclient && nvm use && npm i && npm run build && cd ../admin && npm i && npm run build && cd ~/src/lime-webclient/"
 alias wcupdatepip="poetry run python -m pip install --upgrade pip"
 alias wcteardown="cd ~/src/lime-webclient/ && dc down && dprune && rm -rf .venv"
 alias buildWC="cd ~/src/lime-webclient/frontend/webclient && npm run build"

@@ -181,10 +181,10 @@ conda deactivate
 # Function to get the current active conda environment name
 get_conda_env() {
   # Uses `jq`. Install with `brew install jq` or `sudo apt-get install jq`
-  local env_name=$(conda info --envs --json | jq -r '.active_prefix_name // empty')
-  if [[ -n $env_name ]]; then
-    echo "($env_name)"
-  fi
+  # local env_name=$(conda info --envs --json | jq -r '.active_prefix_name // empty')
+  # if [[ -n $env_name ]]; then
+  #   echo "($env_name)"
+  # fi
 }
 
 # Set up pyenv

@@ -107,7 +107,7 @@ function with_weblatetoken() {
   WEBLATE_TOKEN=$( security find-generic-password -a adrian.schmidt@lime.tech -s weblatetoken -w ) $*
 }
 
-export PIP_REQUIRE_VIRTUALENV=true
+# export PIP_REQUIRE_VIRTUALENV=true
 
 # --- BEGIN load alias definitions ---
 # You may want to put all your additions into a separate file like

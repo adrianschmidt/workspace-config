@@ -30,7 +30,6 @@ alias lintf="npm run lint:fix"
 alias lintpy="poetry run black . && poetry run isort . --profile=black"
 
 alias wcinstallbuild="with_githubtoken cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/webclient && npm i && npm run build && cd ../admin && npm i && npm run build && cd ~/src/lime-webclient/"
-alias wcinstallbuildall="with_githubtoken cd ~/src/lime-webclient/ && nvm use && npm i && cd frontend/importer && nvm use && npm i && npm run build && cd ../webclient && nvm use && npm i && npm run build && cd ../admin && npm i && npm run build && cd ~/src/lime-webclient/"
 alias wcupdatepip="poetry run python -m pip install --upgrade pip"
 alias wcteardown="cd ~/src/lime-webclient/ && dc down && dprune && rm -rf .venv"
 alias buildWC="cd ~/src/lime-webclient/frontend/webclient && npm run build"

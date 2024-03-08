@@ -150,6 +150,9 @@ zstyle ':completion:*' special-dirs true
 # Load the homebrew command line tools
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Add the homebrew-installed git to the PATH
+export PATH="/opt/homebrew/opt/git/bin:$PATH"
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/adrian.schmidt/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

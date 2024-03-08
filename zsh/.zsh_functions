@@ -7,23 +7,18 @@ function llClone() {
 }
 
 function npmInstallLatestAndCommit() {
-    # Use getopt to parse options
-    local args=$(getopt t:s: $*)
-    set -- $args
+    local TYPE="chore"
+    local SCOPE="package"
 
-    for i; do
-        case "$i" in
-            -t)
-                local TYPE="$2"; shift 2;;
-            -s)
-                local SCOPE="$2"; shift 2;;
-            --)
-                shift; break;;
-        esac
-    done
+    # Manually parse options without getopt
+    while [[ "$1" =~ ^- && ! "$1" == "--" ]]; do case $1 in
+        -t | --type)
+            TYPE="$2"; shift 2;;
+        -s | --scope)
+            SCOPE="$2"; shift 2;;
+    esac; done
+    shift # Move past the last option
 
-    local TYPE="${TYPE:-chore}"
-    local SCOPE="${SCOPE:-package}"
     local restArgs=("$@")
 
     for PACKAGE in "${restArgs[@]}"; do

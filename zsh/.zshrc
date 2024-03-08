@@ -103,6 +103,9 @@ function with_npmtoken() {
 function with_openai_api_key() {
   OPENAI_API_KEY=$( security find-generic-password -a rubenpauladrian@gmail.com -s openai_api_token -w ) $*
 }
+function with_anthropic_api_key() {
+  ANTHROPIC_API_KEY=$( security find-generic-password -a rubenpauladrian@gmail.com -s anthropic_api_token -w ) $*
+}
 function with_weblatetoken() {
   WEBLATE_TOKEN=$( security find-generic-password -a adrian.schmidt@lime.tech -s weblatetoken -w ) $*
 }

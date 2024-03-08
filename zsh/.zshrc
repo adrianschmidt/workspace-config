@@ -200,3 +200,4 @@ get_conda_env() {
   #   echo "($env_name)"
   # fi
 }
+test -e /Users/adrian.schmidt/.iterm2_shell_integration.zsh && source /Users/adrian.schmidt/.iterm2_shell_integration.zsh || true

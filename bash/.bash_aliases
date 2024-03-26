@@ -35,3 +35,12 @@ alias wcteardown="cd ~/src/lime-webclient/ && dc down && dprune && rm -rf .venv"
 alias buildWC="cd ~/src/lime-webclient/frontend/webclient && npm run build"
 alias buildCC="cd ~/src/lime-crm-components && npm run build"
 alias buildLE="cd ~/src/lime-elements && npm run build"
+
+# Autogen related aliases
+
+alias agStart="cd ~/src/autogen && with_openai_api_key with_anthropic_api_key docker-compose up"
+alias agRunCommandInContainer="cd ~/src/autogen && docker-compose exec autogenstudio"
+alias agPipUpdate="cd ~/src/autogen && docker-compose exec autogenstudio pip install --no-cache-dir --upgrade"
+alias agHaikuProxyStart="cd ~/src/autogen && with_anthropic_api_key docker-compose exec autogenstudio litellm --model claude-3-haiku-20240307"
+alias agSonnetProxyStart="cd ~/src/autogen && with_anthropic_api_key docker-compose exec autogenstudio litellm --model claude-3-sonnet-20240229 --port 4001"
+alias agOpusProxyStart="cd ~/src/autogen && with_anthropic_api_key docker-compose exec autogenstudio litellm --model claude-3-opus-20240229 --port 4002"

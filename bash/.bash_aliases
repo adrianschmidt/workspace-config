@@ -36,6 +36,8 @@ alias buildWC="cd ~/src/lime-webclient/frontend/webclient && npm run build"
 alias buildCC="cd ~/src/lime-crm-components && npm run build"
 alias buildLE="cd ~/src/lime-elements && npm run build"
 
+alias yrn="with_npmtoken with_githubtoken yarn" # Seriously, yarn can't even run `yarn -h` without these tokens 🤦‍♂️
+
 # Autogen related aliases
 
 alias agStart="cd ~/src/autogen && with_openai_api_key with_anthropic_api_key docker-compose up"

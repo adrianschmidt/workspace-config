@@ -109,6 +109,9 @@ function with_anthropic_api_key() {
 function with_weblatetoken() {
   WEBLATE_TOKEN=$( security find-generic-password -a adrian.schmidt@lime.tech -s weblatetoken -w ) $*
 }
+function with_s3tokens() {
+  AWS_ACCESS_KEY_ID=$( security find-generic-password -a none -s AWS_ACCESS_KEY_ID -w ) AWS_SECRET_ACCESS_KEY=$( security find-generic-password -a none -s AWS_SECRET_ACCESS_KEY -w ) $*
+}
 
 # export PIP_REQUIRE_VIRTUALENV=true
 

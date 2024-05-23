@@ -1,3 +1,5 @@
+export LANG=en_US.UTF-8
+
 # --- START Prompt Configuration ---
 # Update git_prompt and conda_prompt before showing each prompt
 precmd() {

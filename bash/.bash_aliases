@@ -44,6 +44,7 @@ alias agStart='cd ~/src/autogen && with_openai_api_key with_anthropic_api_key do
 alias agStop='cd ~/src/autogen && docker-compose down'
 alias agLogs='cd ~/src/autogen && docker-compose logs -f'
 alias agShell='cd ~/src/autogen && with_openai_api_key with_anthropic_api_key docker-compose exec autogen /bin/bash'
+alias agJupyter='cd ~/src/autogen && with_openai_api_key with_anthropic_api_key docker-compose exec autogen jupyter notebook --ip=0.0.0.0 --allow-root'
 alias agPipUpdate='cd ~/src/autogen && docker-compose exec autogen pip install --no-cache-dir --upgrade'
 alias agHaikuProxyStart='cd ~/src/autogen && with_anthropic_api_key docker-compose exec autogen litellm --model claude-3-haiku-20240307'
 alias agSonnetProxyStart='cd ~/src/autogen && with_anthropic_api_key docker-compose exec autogen litellm --model claude-3-sonnet-20240229 --port 4001'

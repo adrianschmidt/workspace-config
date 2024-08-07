@@ -117,6 +117,8 @@ function with_s3tokens() {
 
 # export PIP_REQUIRE_VIRTUALENV=true
 
+cd() { builtin cd "$@" && if [ -f ".nvmrc" ]; then nvm use; fi }
+
 # --- BEGIN load alias definitions ---
 # You may want to put all your additions into a separate file like
 # ~/.zsh_aliases, instead of adding them here directly.

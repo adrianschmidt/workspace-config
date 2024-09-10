@@ -18,16 +18,25 @@ precmd() {
 }
 
 function get_git_prompt {
+  local git_status=$(git status --porcelain=v2 --branch 2>&1)
   local branch=$(git symbolic-ref HEAD 2> /dev/null | sed -e 's|^refs/heads/||')
+  local detached=$(echo "$git_status" | grep '# branch.head (detached)')
+
+  if [ -n "$detached" ]; then
+    branch="%F{red}detached head%f"  # Indicate detached head state in red
+  elif [ -n "$branch" ]; then
+    branch="%F{green}$branch%f"  # Show branch name in green when on a branch
+  fi
+
   if [ -n "$branch" ]; then
     local git_status=$(parse_git_dirty)
     # Check if git_status is not empty and prepend a space if it's not
     if [[ -n "$git_status" ]]; then
       git_status=" $git_status"
     fi
-    echo "[%F{green}$branch%f$git_status]"
+    echo "[$branch$git_status]"
   else
-    echo ""
+    echo ""  # Return an empty string if not in a git directory
   fi
 }
 

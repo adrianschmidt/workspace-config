@@ -46,13 +46,17 @@ function parse_git_file_changes {
   local git_status=$(git status --porcelain=v2 --branch 2>&1)
   local bits=""
 
-  # Check if there are unstaged files
+  # Check if there are unstaged files (modified but not staged)
   if [[ $(echo "$git_status" | grep '^1 .M' ) != "" ]]; then
     bits+="%F{red}%f"
   fi
-  # Check if there are staged files
+  # Check if there are staged files (modified and staged)
   if [[ $(echo "$git_status" | grep '^1 M.' ) != "" ]]; then
     bits+="%F{green}%f"
+  fi
+  # Check if there are staged new files (new and staged)
+  if [[ $(echo "$git_status" | grep '^1 A.' ) != "" || $(echo "$git_status" | grep '^2 A.' ) != "" ]]; then
+    bits+="%F{green}%f"
   fi
   # Check if there are untracked files
   if [[ $(echo "$git_status" | grep '^\?' ) != "" ]]; then

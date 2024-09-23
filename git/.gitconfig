@@ -1,7 +1,7 @@
 [user]
     name = Adrian Schmidt
     email = adrian.schmidt@lime.tech
-	signingkey = BD71341CC9682F0F
+    signingkey = BD71341CC9682F0F
 [push]
     default = simple
 [alias]
@@ -23,15 +23,15 @@
     fix = commit --fixup
     d = diff
     a = add -A
-	ds = diff --staged
-	find = log --all --grep
-	h = log --pretty=\"format:%C(blue)%h%C(yellow) %s %C(green)%an%Creset, %ar%C(red)%d\" --graph
-	hm = h main..HEAD
-	hu = h HEAD..@{u}
-	ulog = log HEAD..@{u}
-	hb = h beta..HEAD
-	amend = commit --amend
-	fetchNotes = fetch origin refs/notes/*:refs/notes/*
+    ds = diff --staged
+    find = log --all --grep
+    h = log --pretty=\"format:%C(blue)%h%C(yellow) %s %C(green)%an%Creset, %ar%C(red)%d\" --graph
+    hm = h main..HEAD
+    hu = h HEAD..@{u}
+    ulog = log HEAD..@{u}
+    hb = h beta..HEAD
+    amend = commit --amend
+    fetchNotes = fetch origin refs/notes/*:refs/notes/*
 [color]
     ui = always
     diff = always
@@ -42,7 +42,7 @@
 [core]
     excludesfile = ~/.gitignore_global # This is the global .gitignore file.
     pager = diff-so-fancy | less --tabs=4 -RFX
-	hooksPath = /Users/adrian.schmidt/.git-templates/hooks/
+    hooksPath = /Users/adrian.schmidt/.git-templates/hooks/
 [rebase]
     autosquash = true # Love this! When running an interactive rebase, it automatically moves commits made with `git commit --fixup` or `--squash` to the correct line, and marks them with `fixup` and `squash` respectively.
     missingCommitsCheck = error
@@ -61,10 +61,10 @@
 [diff-so-fancy]
     stripLeadingSymbols = false
 [gpg]
-	program = gpg
+    program = gpg
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [commit]
-	gpgsign = true
+    gpgsign = true
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain

@@ -32,9 +32,11 @@ alias lintpy="poetry run black . && poetry run isort . --profile=black && poetry
 alias wcinstallbuild="cd ~/src/lime-webclient/ && with_githubtoken npm i && cd frontend/webclient && with_githubtoken npm i && npm run build && cd ../admin && with_githubtoken npm i && npm run build && cd ../new-admin && with_githubtoken npm i && npm run build && cd ~/src/lime-webclient/"
 alias wcupdatepip="poetry run python -m pip install --upgrade pip"
 alias wcteardown="cd ~/src/lime-webclient/ && dc down && dprune && rm -rf .venv"
-alias buildWC="cd ~/src/lime-webclient/frontend/webclient && npm run build"
-alias buildCC="cd ~/src/lime-crm-components && npm run build"
-alias buildLE="cd ~/src/lime-elements && npm run build"
+alias wceventhandler="cd ~/src/lime-webclient/ && poetry run python .venv/bin/lime-event-handler"
+alias wctaskhandler="cd ~/src/lime-webclient/ && poetry run python .venv/bin/lime-task-handler"
+alias wcsetup="cd ~/src/lime-webclient/ && pipx upgrade lime-project && wcinstallbuild && wcteardown && lime-project env prepare"
+
+alias nibb="npm i && npm run build && npm run build"
 
 alias yrn="with_npmtoken with_githubtoken yarn" # Seriously, yarn can't even run `yarn -h` without these tokens 🤦‍♂️
 

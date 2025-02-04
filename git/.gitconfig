@@ -1,7 +1,7 @@
 [user]
     name = Adrian Schmidt
     email = adrian.schmidt@lime.tech
-    signingkey = BD71341CC9682F0F
+	signingkey = E3CCC1456D4A34F3
 [push]
     default = simple
 [alias]

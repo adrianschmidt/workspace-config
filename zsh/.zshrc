@@ -112,6 +112,9 @@ function parse_git_branch_status {
 function with_githubtoken() {
   GITHUB_TOKEN=$( security find-generic-password -a adrianschmidt -s githubtoken -w ) $*
 }
+function with_githubtoken_mcp() {
+  GITHUB_PERSONAL_ACCESS_TOKEN=$( security find-generic-password -a adrianschmidt -s githubMcpServerToken -w ) $*
+}
 function with_npmtoken() {
   NPM_TOKEN=$( security find-generic-password -a specularrain -s npmtoken -w ) $*
 }

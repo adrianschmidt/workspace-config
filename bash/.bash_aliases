@@ -29,7 +29,7 @@ alias lint="npm run lint"
 alias lintf="npm run lint:fix"
 alias lintpy="poetry run black . && poetry run isort . --profile=black && poetry run flake8 ."
 
-alias wcinstallbuild="cd ~/src/lime-webclient/ && with_githubtoken npm i && cd frontend/webclient && with_githubtoken npm i && npm run build && cd ../admin && with_githubtoken npm i && npm run build && cd ../new-admin && with_githubtoken npm i && npm run build && cd ~/src/lime-webclient/"
+alias wcinstallbuild="cd ~/src/lime-webclient/ && with_githubtoken npm i && cd frontend/webclient && with_githubtoken npm i && npm run build && cd ../service-worker && with_githubtoken npm i && npm run build && cd ../admin && with_githubtoken npm i && npm run build && cd ../new-admin && with_githubtoken npm i && npm run build && cd ~/src/lime-webclient/"
 alias wcupdatepip="poetry run python -m pip install --upgrade pip"
 alias wcteardown="cd ~/src/lime-webclient/ && dc down && dprune && rm -rf .venv"
 alias wceventhandler="cd ~/src/lime-webclient/ && poetry run python .venv/bin/lime-event-handler"

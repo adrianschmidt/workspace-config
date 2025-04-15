@@ -193,6 +193,8 @@ export PATH="/Users/adrian.schmidt/.rd/bin:$PATH"
 # Created by `pipx` on 2024-02-22 07:45:30
 export PATH="$PATH:/Users/adrian.schmidt/.local/bin"
 
+export PIPX_HOME=~/.local/pipx
+
 # To get Puppeteer to work, you need to install chromium manually by running
 # `brew install chromium --no-quarantine`
 # Since we install is manually, we need to tell Puppeteer to skip the download.

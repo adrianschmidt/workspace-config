@@ -5,7 +5,7 @@ alias la='grc ls -Ah'
 alias l='grc ls -CFh'
 
 alias d=docker
-alias dc=docker-compose
+alias dc="docker compose"
 alias dprune="d system prune --volumes -f"
 
 alias npmOutdated="with_githubtoken npm outdated"

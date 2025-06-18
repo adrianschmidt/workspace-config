@@ -236,3 +236,6 @@ get_conda_env() {
   # fi
 }
 test -e /Users/adrian.schmidt/.iterm2_shell_integration.zsh && source /Users/adrian.schmidt/.iterm2_shell_integration.zsh || true
+
+export JAVA_HOME="/opt/homebrew/opt/openjdk@21"
+export PATH="$JAVA_HOME/bin:$PATH"

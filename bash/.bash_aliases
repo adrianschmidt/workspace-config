@@ -28,6 +28,7 @@ alias awsLogin="aws sso login --profile sharedecr"
 alias lint="npm run lint"
 alias lintf="npm run lint:fix"
 alias lintpy="poetry run black . && poetry run isort . --profile=black && poetry run flake8 ."
+alias lintruff="poetry run ruff format && poetry run ruff check --fix && poetry run ruff format"
 
 alias wcinstallbuild="cd ~/src/lime-webclient/ && with_githubtoken npm i && cd frontend/webclient && with_githubtoken npm i && npm run build && cd ../service-worker && with_githubtoken npm i && npm run build && cd ../admin && with_githubtoken npm i && npm run build && cd ../new-admin && with_githubtoken npm i && npm run build && cd ~/src/lime-webclient/"
 alias wcupdatepip="poetry run python -m pip install --upgrade pip"

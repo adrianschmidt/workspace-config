@@ -35,6 +35,7 @@
     hb = h beta..HEAD
     amend = commit --amend
     fetchNotes = fetch origin refs/notes/*:refs/notes/*
+	diff-svg = difftool -t lukaj -y
 [color]
     ui = always
     diff = always
@@ -71,3 +72,5 @@
     gpgsign = true
 [credential]
     helper = osxkeychain
+[difftool "lukaj"]
+	cmd = ~/.cargo/bin/lukaj \"$LOCAL\" \"$REMOTE\"

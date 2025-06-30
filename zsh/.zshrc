@@ -244,3 +244,4 @@ test -e /Users/adrian.schmidt/.iterm2_shell_integration.zsh && source /Users/adr
 
 export JAVA_HOME="/opt/homebrew/opt/openjdk@21"
 export PATH="$JAVA_HOME/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"

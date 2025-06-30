@@ -134,6 +134,11 @@ function with_s3tokens() {
 function with_bedrocktoken() {
   GITHUB_TOKEN=$( security find-generic-password -a adrian.schmidt -s awsbedrocktoken -w ) $*
 }
+function with_gemini_api_key() {
+  GEMINI_API_KEY=$( security find-generic-password -a rubenpauladrian@gmail.com -s gemini_cli_api_key -w ) $*
+}
+
+
 
 # export PIP_REQUIRE_VIRTUALENV=true
 

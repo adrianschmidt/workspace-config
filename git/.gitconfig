@@ -73,4 +73,4 @@
 [credential]
     helper = osxkeychain
 [difftool "lukaj"]
-	cmd = ~/.cargo/bin/lukaj \"$LOCAL\" \"$REMOTE\"
+	cmd = ~/.cargo/bin/lukaj -s 5 \"$LOCAL\" \"$REMOTE\"

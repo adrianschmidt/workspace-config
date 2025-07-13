@@ -60,3 +60,5 @@ function npmInstallLatestAndCommit() {
     # Display git log for the number of updated packages
     git log -${#restArgs[@]}
 }
+
+alias src=". ~/.zshrc"

@@ -1,3 +1,12 @@
+# `g` is an alias for `git`, but runs `git s` if no arguments are provided.
+g() {
+  if [ $# -eq 0 ]; then
+    command git s
+  else
+    command git "$@"
+  fi
+}
+
 function llClone() {
     cd ~/src/
     repo_name="$1"

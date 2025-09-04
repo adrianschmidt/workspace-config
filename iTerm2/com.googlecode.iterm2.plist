@@ -560,6 +560,8 @@ The script should do this: \(ai.prompt)</string>
 			<integer>1</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Unicode Version</key>
+			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>

@@ -104,39 +104,10 @@ function parse_git_branch_status {
 }
 # --- END Prompt Configuration ---
 
-# Tokens
-# Since this file is committed to github, absolutely no tokens or
-# other secrets can go in this file. Rather than using a separate file,
-# the secrets are stored in the keychain and accessed via the `security`
-# command line tool.
-function with_githubtoken() {
-  GITHUB_TOKEN=$( security find-generic-password -a adrianschmidt -s githubtoken -w ) $*
-}
-alias wgt=with_githubtoken
-function with_githubtoken_mcp() {
-  GITHUB_PERSONAL_ACCESS_TOKEN=$( security find-generic-password -a adrianschmidt -s githubMcpServerToken -w ) $*
-}
-function with_npmtoken() {
-  NPM_TOKEN=$( security find-generic-password -a specularrain -s npmtoken -w ) $*
-}
-function with_openai_api_key() {
-  OPENAI_API_KEY=$( security find-generic-password -a rubenpauladrian@gmail.com -s openai_api_token -w ) $*
-}
-function with_anthropic_api_key() {
-  ANTHROPIC_API_KEY=$( security find-generic-password -a rubenpauladrian@gmail.com -s anthropic_api_token -w ) $*
-}
-function with_weblatetoken() {
-  WEBLATE_TOKEN=$( security find-generic-password -a adrian.schmidt@lime.tech -s weblatetoken -w ) $*
-}
-function with_s3tokens() {
-  AWS_ACCESS_KEY_ID=$( security find-generic-password -a none -s AWS_ACCESS_KEY_ID -w ) AWS_SECRET_ACCESS_KEY=$( security find-generic-password -a none -s AWS_SECRET_ACCESS_KEY -w ) $*
-}
-function with_bedrocktoken() {
-  GITHUB_TOKEN=$( security find-generic-password -a adrian.schmidt -s awsbedrocktoken -w ) $*
-}
-function with_gemini_api_key() {
-  GEMINI_API_KEY=$( security find-generic-password -a rubenpauladrian@gmail.com -s gemini_cli_api_key -w ) $*
-}
+# Secrets
+if [ -f ~/.zsh_secrets ]; then
+    . ~/.zsh_secrets
+fi
 
 
 

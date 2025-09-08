@@ -1,8 +1,13 @@
 export LANG=en_US.UTF-8
 
 # --- START Prompt Configuration ---
-# Update git_prompt and conda_prompt before showing each prompt
 precmd() {
+  # Set iTerm2 window title to the current directory
+  print -Pn '\e]2;%~\a';
+  # Set iTerm2 tab title to the current directory
+  print -Pn '\e]1;%~\a';
+
+  # Update git_prompt and conda_prompt before showing each prompt
   git_prompt=$(get_git_prompt)
   conda_prompt=$(get_conda_env)
 

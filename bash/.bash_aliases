@@ -31,11 +31,12 @@ alias lintpy="poetry run black . && poetry run isort . --profile=black && poetry
 alias lintruff="poetry run ruff format && poetry run ruff check --fix && poetry run ruff format"
 
 alias wcinstallbuild="cd ~/src/lime-webclient/ && with_githubtoken npm i && cd frontend/webclient && with_githubtoken npm i && npm run build && cd ../service-worker && with_githubtoken npm i && npm run build && cd ../admin && with_githubtoken npm i && npm run build && cd ../new-admin && with_githubtoken npm i && npm run build && cd ~/src/lime-webclient/"
+alias wcsetup="pipx upgrade lime-project && wcinstallbuild && wcteardown && lime-project env prepare"
+
 alias wcupdatepip="poetry run python -m pip install --upgrade pip"
-alias wcteardown="cd ~/src/lime-webclient/ && dc down && dprune && rm -rf .venv"
-alias wceventhandler="cd ~/src/lime-webclient/ && poetry run python .venv/bin/lime-event-handler"
-alias wctaskhandler="cd ~/src/lime-webclient/ && poetry run python .venv/bin/lime-task-handler"
-alias wcsetup="cd ~/src/lime-webclient/ && pipx upgrade lime-project && wcinstallbuild && wcteardown && lime-project env prepare"
+alias wcteardown="dc down && dprune && rm -rf .venv"
+alias wceventhandler="poetry run python .venv/bin/lime-event-handler"
+alias wctaskhandler="poetry run python .venv/bin/lime-task-handler"
 
 alias nibb="npm i && npm run build && npm run build"
 

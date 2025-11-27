@@ -221,3 +221,11 @@ test -e /Users/adrian.schmidt/.iterm2_shell_integration.zsh && source /Users/adr
 export JAVA_HOME="/opt/homebrew/opt/openjdk@21"
 export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+
+
+# Set the default GUI code editor to Cursor
+export VISUAL="cursor"
+# Set the default terminal editor to vim
+export EDITOR="vim"
+# Set the default git editor to vim
+export GIT_EDITOR="vim"

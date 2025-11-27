@@ -91,19 +91,46 @@ Before posting any replies to review comments, ASK the user:
 - "I've addressed N comments. Should I post replies to all of them?"
 
 **Response Format:**
-When given permission, post threaded replies using:
+When given permission, post threaded replies using the GitHub API.
+
+**IMPORTANT - Correct API Endpoint:**
+- ✅ **CORRECT:** Use the PR comments collection endpoint with `in_reply_to` parameter
+- ❌ **WRONG:** Do NOT try to POST to the individual comment endpoint
+
+**Correct command format:**
 ```bash
-gh api repos/Lundalogik/<repo-name>/pulls/<PR-number>/comments -X POST \
-  --field body="⚡️ <commit-hash>" \
-  --field in_reply_to=<comment-id>
+# Get repo owner and name from PR URL or assume Lundalogik/<repo-name>
+gh api repos/<owner>/<repo-name>/pulls/<PR-number>/comments -X POST \
+  -f body="⚡️ <commit-hash>" \
+  -F in_reply_to=<comment-id>
 ```
 
-Use the ⚡️ (zap) emoji to indicate feedback has been addressed, followed by the relevant fixup commit hash.
+**Example:**
+```bash
+# For PR #153 on jgroth/kompendium, replying to comment 2568687596
+gh api repos/jgroth/kompendium/pulls/153/comments -X POST \
+  -f body="⚡️ 59a0220" \
+  -F in_reply_to=2568687596
+```
+
+**Common mistake to avoid:**
+```bash
+# ❌ WRONG - This will fail with "in_reply_to is not a permitted key"
+gh api repos/owner/repo/pulls/comments/2568687596 -X POST \
+  -f body="⚡️ 59a0220" \
+  -F in_reply_to=2568687596
+```
+
+**Notes:**
+- Use the ⚡️ (zap) emoji to indicate feedback has been addressed, followed by the relevant fixup commit hash
+- The `-f` flag is shorthand for `--field` (both work)
+- The `-F` flag is for integer/number fields like `in_reply_to`
+- For non-Lundalogik repos, extract owner and repo name from the PR URL
 
 **Track which comments need replies:**
 ```bash
 # List all review comments with their IDs
-gh api repos/Lundalogik/<repo-name>/pulls/<PR-number>/comments | \
+gh api repos/<owner>/<repo-name>/pulls/<PR-number>/comments | \
   jq '.[] | {id, body, path, line}'
 ```
 
@@ -189,7 +216,15 @@ git push --force-with-lease
 
 ## 8. Repository Information
 
+**For Lundalogik Organization:**
 - **Organization:** `Lundalogik`
 - **Repo naming:** Usually matches folder name (e.g., `aws-bedrock-gateway`)
 - **Exception:** `limeclient.js` repo is in `lime-client` folder
 - **When uncertain:** Ask the user for clarification
+
+**For Non-Lundalogik Repos:**
+When working with PRs on repos outside the Lundalogik organization:
+1. Extract the owner and repo name from the PR URL
+   - Example: `https://github.com/jgroth/kompendium/pull/153` → owner: `jgroth`, repo: `kompendium`
+2. Use these in your `gh api` commands
+3. The workflow remains the same, just substitute the correct owner/repo in API calls

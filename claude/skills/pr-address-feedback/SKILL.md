@@ -52,6 +52,8 @@ gh pr view <PR-number>
 - Create separate fixup commits for each distinct issue
 - This makes the review process clear and traceable
 
+**Important:** Before making any changes, consider if the feedback is correct! If you disagree with the feedback, explain why and ask the user what to do.
+
 **Use Fixup Commits:**
 ```bash
 # Make your changes to address the feedback

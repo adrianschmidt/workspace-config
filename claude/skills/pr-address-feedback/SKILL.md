@@ -137,6 +137,8 @@ gh pr view <PR-number>
 
 **Note:** Always run linting and tests BEFORE pushing to catch issues early.
 
+**Note:** There is often a PR check called something like "Block Autosquash Commits". This check fails if the PR has any `fixup!` or `squash!` commits. In other words, this check is expected to fail if you have pushed fixups to the PR. This is expected and normal. You can ignore it. Once the PR is approved, the user will squash the commits before merging.
+
 ## 5. Complete Workflow Example
 
 1. **Check prerequisites:** Verify git status, branch, and gh auth

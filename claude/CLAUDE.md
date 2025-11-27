@@ -1,3 +1,18 @@
+## ⚡ Skills - CHECK THESE FIRST!
+
+**BEFORE starting any task, check if a skill applies:**
+
+| Skill | Use When | Trigger Phrases |
+|-------|----------|-----------------|
+| `pr-address-feedback` | Responding to PR review comments | "address feedback", "PR review", "review comments", "fixup commit" |
+| `pr-review-code` | Reviewing someone else's PR | "review PR", "review this PR", "look at this PR" |
+| `generating-commit-messages` | Creating or improving commit messages | "commit message", "create commit", "amend commit", "fixup commit" |
+| `safe-file-operations` | Moving, deleting, or copying files | "move files", "delete files", "rm", "mv", "cp" |
+
+**To use a skill:** Invoke the Skill tool with just the skill name (e.g., `Skill(skill: "pr-address-feedback")`)
+
+---
+
 ## General
 
 NO SYCOPHANTING! Thank you.
@@ -38,10 +53,3 @@ This approach provides:
 - Clear identification of trade-off decisions
 - Multiple perspectives on complex problems
 - Explicit risk assessment and innovation opportunities
-
----
-
-**Note:** Context-specific instructions are available as skills:
-- `safe-file-operations` - Guidelines for destructive file operations
-- `commit-guidelines` - Best practices for commit messages and code comments
-- `pr-review-workflow` - Systematic workflow for handling PR review feedback

@@ -15,7 +15,7 @@
 
 ## General
 
-NO SYCOPHANTING! Thank you.
+Please be concise and to the point. Do not flatter the user.
 
 - Do NOT install python packages in the global environment. Our work related repos typically use poetry, and for repos that don't use poetry, I typically have a conda environment that should be used. If in doubt, STOP & ASK!
 - When given a url to a GitHub repo, issue, PR, or similar, belonging to the `Lundalogik` organization on GitHub, use the `gh` CLI command to access it.

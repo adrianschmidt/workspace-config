@@ -7,13 +7,54 @@ description: "Generates clear commit messages following conventional commit conv
 
 ## Instructions
 
-1. Run `git diff --staged` to see changes
-2. I'll suggest a commit message adhering to conventional commit message conventions.
+1. Run `git log` to see recent commit messages and match the repository's existing commit message style
+2. Run `git diff --staged` to see the changes being committed
+3. Suggest a commit message adhering to conventional commit message conventions
+
+## Conventional Commit Format
+
+Use the conventional commit format: `<type>(<scope>): <subject>`
+
+### Common Types:
+- **feat**: A new feature (user-facing functionality)
+- **fix**: A bug fix
+- **docs**: Documentation changes only
+- **style**: Code style changes (formatting, missing semicolons, etc.) - no logic changes
+- **refactor**: Code changes that neither fix bugs nor add features
+- **perf**: Performance improvements
+- **test**: Adding or updating tests
+- **chore**: Changes to build process, dependencies, or tooling
+- **ci**: Changes to CI/CD configuration
+
+### Scope (optional):
+- The scope specifies what part of the codebase is affected (e.g., `feat(auth):`, `fix(api):`)
+- Use when it adds clarity, omit when the change is global or obvious
+
+### Subject line:
+- Use present tense with imperative mood ("add feature" not "added feature")
+- Don't capitalize first letter after the colon
+- No period at the end
+- Keep under 72 characters
+
+### Body (optional):
+- Separate from subject with a blank line
+- Explain what and why, not how
+- Wrap at 72 characters
+- Can include multiple paragraphs
+
+### Example:
+```
+feat(router): add support for nested routes
+
+Implements nested routing to allow for more complex application structures.
+This enables parent-child route relationships and hierarchical navigation.
+```
 
 ## Best practices
 
-- Use present tense with the imperative mood.
+- Use present tense with the imperative mood
 - Explain what and why, not how
+- Match the existing commit message style in the repository (check `git log`)
 
 ## Fixup and Amend Commits
 

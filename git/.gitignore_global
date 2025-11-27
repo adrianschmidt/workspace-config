@@ -1,2 +1,5 @@
 .DS_Store
 lime_webclient/client/templates/service-worker/*
+.claude/
+.playwright-mcp/
+.git_worktrees/

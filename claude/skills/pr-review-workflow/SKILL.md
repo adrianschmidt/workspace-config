@@ -1,11 +1,29 @@
 ---
-name: pr-review-workflow
-description: "Systematic workflow for addressing pull request review feedback. Use when handling PR reviews, creating fixup commits, or responding to reviewer comments. Covers reading feedback, creating fixup commits, and posting responses via GitHub CLI."
+name: pr-address-feedback
+description: "Workflow for addressing review feedback on your pull requests. Use when YOUR PR has been reviewed and you need to respond to comments with fixup commits."
 ---
 
 # Handling Pull Request Review Feedback
 
 When the user asks you to address review feedback on a PR, follow these systematic steps:
+
+## 0. Prerequisites Check
+
+Before starting, verify the environment is ready:
+
+```bash
+# Check git status is clean (or only has expected changes)
+git status
+
+# Ensure you're on the correct branch
+git branch --show-current
+
+# Check if branch is up to date with remote
+git fetch && git status
+
+# Verify gh CLI is authenticated
+gh auth status
+```
 
 ## 1. Reading Review Comments
 
@@ -49,8 +67,18 @@ Addresses review feedback from @<reviewer>"
 
 **Fixup Commit Format:**
 - Subject: `fixup! <original-commit-subject>`
-- Body: Clear description of what was changed
+- Body: Clear description of what was changed (always include this)
 - Footer: `Addresses review feedback from @<reviewer>`
+
+**CRITICAL - NEVER AUTO-SQUASH:**
+- ❌ DO NOT use `git rebase -i --autosquash`
+- ❌ DO NOT squash fixup commits automatically
+- ❌ DO NOT use `git commit --amend` to add changes to existing commits
+- ✅ Fixup commits MUST remain as separate commits during review
+- ✅ You MAY use `git rebase -i --no-autosquash` to reorder commits if needed
+- ✅ Only squash commits if the user EXPLICITLY requests it
+
+**Why:** Keeping fixup commits separate preserves the review trail, allowing reviewers to see exactly what changed in response to their feedback.
 
 ## 3. Responding to Review Comments
 
@@ -58,6 +86,7 @@ Addresses review feedback from @<reviewer>"
 Before posting any replies to review comments, ASK the user:
 - "Should I post replies to the review comments?"
 - "Do you want me to respond to @reviewer's feedback?"
+- "I've addressed N comments. Should I post replies to all of them?"
 
 **Response Format:**
 When given permission, post threaded replies using:
@@ -69,23 +98,92 @@ gh api repos/Lundalogik/<repo-name>/pulls/<PR-number>/comments -X POST \
 
 Use the ⚡️ (zap) emoji to indicate feedback has been addressed, followed by the relevant fixup commit hash.
 
-## 4. Complete Workflow Example
+**Track which comments need replies:**
+```bash
+# List all review comments with their IDs
+gh api repos/Lundalogik/<repo-name>/pulls/<PR-number>/comments | \
+  jq '.[] | {id, body, path, line}'
+```
 
-1. **Read feedback:** `gh pr view 63 --json comments,reviews`
-2. **Address issues one by one:** Create fixup commits for each item
-3. **Ask permission:** "Should I post replies to indicate the feedback has been addressed?"
-4. **Post responses:** Use ⚡️ + commit hash format
-5. **Summarize:** Provide overview of all changes made
+## 4. Verify and Push
 
-## 5. Best Practices
+After creating fixup commits:
+
+```bash
+# Run linting with auto-fix
+# For TypeScript projects or frontend/ folders:
+lintf
+
+# For Python projects using black/isort/flake8:
+lintpy
+
+# For Python projects using ruff:
+lintruff
+
+# Run tests locally
+npm test  # or pytest, or appropriate test command
+
+# If tests/linting pass, push changes to remote
+git push
+
+# Check CI status
+gh pr checks <PR-number> --watch
+
+# View updated PR
+gh pr view <PR-number>
+```
+
+**Note:** Always run linting and tests BEFORE pushing to catch issues early.
+
+## 5. Complete Workflow Example
+
+1. **Check prerequisites:** Verify git status, branch, and gh auth
+2. **Read feedback:** `gh pr view 63 --json comments,reviews`
+3. **Address issues one by one:** Create fixup commits for each item
+4. **Verify changes:** Run linting and tests
+5. **Push to remote:** `git push`
+6. **Check CI:** `gh pr checks 63 --watch`
+7. **Ask permission:** "Should I post replies to indicate the feedback has been addressed?"
+8. **Post responses:** Use ⚡️ + commit hash format
+9. **Summarize:** Provide overview of all changes made
+
+## 6. Best Practices
 
 - **Be systematic:** Don't batch unrelated fixes into one commit
 - **Be specific:** Reference exact reviewer suggestions in commit messages
 - **Be communicative:** Clear commit messages help reviewers understand changes
 - **Be respectful:** Always ask before posting comments on behalf of the user
 - **Be thorough:** Address ALL feedback items, don't miss any
+- **Never auto-squash:** Keep fixup commits separate during review
+- **Verify before pushing:** Run linting and tests to catch issues early
 
-## 6. Repository Information
+## 7. Troubleshooting
+
+**Branch diverged from remote:**
+```bash
+# Rebase to sync with remote (preserves fixup commits)
+git pull --rebase origin <branch-name>
+```
+
+**Need to modify the last fixup commit:**
+```bash
+# Only if explicitly requested by user
+git add <files>
+git commit --amend --no-edit
+git push --force-with-lease
+```
+
+**Linting or tests fail:**
+- Fix the issues before pushing
+- Create additional fixup commits if needed
+- Never push broken code
+
+**Check if comment is outdated:**
+- Review comments may be on old line numbers after changes
+- Verify the comment still applies to current code
+- Ask user if unclear whether feedback is still relevant
+
+## 8. Repository Information
 
 - **Organization:** `Lundalogik`
 - **Repo naming:** Usually matches folder name (e.g., `aws-bedrock-gateway`)

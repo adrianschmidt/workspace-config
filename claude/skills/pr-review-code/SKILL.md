@@ -88,25 +88,25 @@ Review the code thoroughly, focusing on quality and security:
 - You can run linting to check style compliance
 - Not required, but available for additional verification
 
-## 4. Leaving Review Comments
+## 4. Preparing Review Comments
 
-### Using gh CLI for Comments
+### IMPORTANT - Do NOT Post Comments to GitHub
 
-Use gh CLI for general/overall review comments:
+- ❌ **NEVER** use `gh pr review` to post comments directly to GitHub
+- ✅ **ALWAYS** output review comments in your response to the user
+- The user will manually post comments after reviewing and editing them
 
-```bash
-# Post a review comment (does not submit the review)
-gh pr review <PR-number> --comment -b "Review comment text"
-```
+### Comment Format
 
-### IMPORTANT - Line-Specific Comments
+Format your review comments as markdown in your response, organized by:
 
-- ⚠️ gh CLI has limited support for line-specific comments
-- Since Lundalogik repos are private, you cannot use GitHub web UI
-- **Solution**: If line-specific comments are needed:
-  1. Document the specific lines and feedback in the general review comment
-  2. Ask the user if they want to post line-specific comments manually
-  3. Format: "Line 42 in `file.ts`: [specific feedback here]"
+1. **Major Issues** - Blocking problems that must be addressed
+2. **Minor Issues** - Important but not critical
+3. **Nitpicks** - Small improvements (spelling, style, comments)
+4. **Positive Aspects** - What was done well
+
+For line-specific feedback, use this format:
+- `file.ts:42` - Description of the issue with code examples
 
 ### Comment Best Practices
 
@@ -125,25 +125,26 @@ gh pr review <PR-number> --comment -b "Review comment text"
 **CRITICAL - Agent's Role:**
 
 - ❌ NEVER submit the review (approve/request changes/comment)
-- ✅ Post review comments for the user to review
+- ❌ NEVER post comments directly to GitHub
+- ✅ Output review comments in your response for the user to review
 - ✅ Provide a recommendation to the user on what action to take
 
 **Workflow:**
 
-1. Post all review comments using gh CLI
+1. Output all review comments as formatted markdown in your response
 2. Summarize your findings
 3. Provide a clear recommendation to the user
-4. User can then edit comments in GitHub UI and submit the review themselves
+4. User will manually post the review to GitHub after reviewing/editing
 
 **Recommendation Format:**
 
-After posting comments, provide a clear recommendation:
+After outputting your review comments, provide a clear recommendation:
 
 - "Based on the review, I recommend **requesting changes** due to [security concerns/major issues that must be addressed]"
 - "Based on the review, I recommend **commenting** with suggestions that are nice-to-have but not blocking"
 - "Based on the review, I recommend **approving** - the code looks good with only minor nitpicks"
 
-**Note:** The user always has final control to edit comments and choose the review action.
+**Note:** The user always has full control to edit your feedback and choose when/how to post it to GitHub.
 
 ## 6. Complete Workflow Example
 
@@ -156,9 +157,9 @@ Here's a complete example of the review process:
    - Examine code quality (logic, patterns, readability)
    - Check for security issues (input validation, auth, secrets)
    - Note nitpicks (spelling, minor style issues)
-5. **Post comments**: `gh pr review 42 --comment -b "Review feedback here"`
+5. **Output review**: Format your findings as markdown and output to the user
 6. **Provide recommendation**: "I recommend requesting changes due to the input validation issue in line 123"
-7. **User takes over**: User edits comments in GitHub UI and submits the review
+7. **User takes over**: User manually posts the review to GitHub after reviewing/editing your feedback
 
 **Note:** Do NOT include cleanup steps after review. Leave the PR branch checked out as-is.
 

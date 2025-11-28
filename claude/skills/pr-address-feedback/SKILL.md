@@ -152,19 +152,11 @@ lintruff
 # Run tests locally
 npm test  # or pytest, or appropriate test command
 
-# If tests/linting pass, push changes to remote
+# If tests and linting pass, push changes to remote
 git push
-
-# Check CI status
-gh pr checks <PR-number> --watch
-
-# View updated PR
-gh pr view <PR-number>
 ```
 
 **Note:** Always run linting and tests BEFORE pushing to catch issues early.
-
-**Note:** There is often a PR check called something like "Block Autosquash Commits". This check fails if the PR has any `fixup!` or `squash!` commits. In other words, this check is expected to fail if you have pushed fixups to the PR. This is expected and normal. You can ignore it. Once the PR is approved, the user will squash the commits before merging.
 
 ## 5. Complete Workflow Example
 
@@ -173,10 +165,9 @@ gh pr view <PR-number>
 3. **Address issues one by one:** Create SEPARATE fixup commits for each item
 4. **Verify changes:** Run linting and tests
 5. **Push to remote:** `git push`
-6. **Check CI:** `gh pr checks 63 --watch`
-7. **Ask permission:** "Should I post replies to indicate the feedback has been addressed?"
-8. **Post responses:** Use the format `⚡️ commit-hash` where `commit-hash` is the hash of the fixup commit that addresses the feedback in the specific comment.
-9. **Summarize:** Provide overview of all changes made
+6. **Ask permission:** "Should I post replies to indicate the feedback has been addressed?"
+7. **Post responses:** Use the format `⚡️ commit-hash` where `commit-hash` is the hash of the fixup commit that addresses the feedback in the specific comment.
+8. **Summarize:** Provide overview of all changes made
 
 ## 6. Best Practices
 

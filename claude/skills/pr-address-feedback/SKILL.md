@@ -136,7 +136,7 @@ gh api repos/<owner>/<repo-name>/pulls/<PR-number>/comments | \
 
 ## 4. Verify and Push
 
-After creating fixup commits:
+After creating all fixup commits:
 
 ```bash
 # Run linting with auto-fix
@@ -170,12 +170,12 @@ gh pr view <PR-number>
 
 1. **Check prerequisites:** Verify git status, branch, and gh auth
 2. **Read feedback:** `gh pr view 63 --json comments,reviews`
-3. **Address issues one by one:** Create fixup commits for each item
+3. **Address issues one by one:** Create SEPARATE fixup commits for each item
 4. **Verify changes:** Run linting and tests
 5. **Push to remote:** `git push`
 6. **Check CI:** `gh pr checks 63 --watch`
 7. **Ask permission:** "Should I post replies to indicate the feedback has been addressed?"
-8. **Post responses:** Use ⚡️ + commit hash format
+8. **Post responses:** Use the format `⚡️ commit-hash` where `commit-hash` is the hash of the fixup commit that addresses the feedback in the specific comment.
 9. **Summarize:** Provide overview of all changes made
 
 ## 6. Best Practices

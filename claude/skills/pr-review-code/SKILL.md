@@ -1,6 +1,6 @@
 ---
 name: pr-review-code
-description: "Workflow for reviewing someone else's pull request. Use when you need to review code changes, provide feedback, and submit a review on another developer's PR."
+description: "**ALWAYS USE THIS SKILL** when asked to review a PR or given a PR URL. Provides systematic workflow for code review."
 ---
 
 # Reviewing Pull Requests

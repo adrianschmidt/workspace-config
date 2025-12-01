@@ -1,3 +1,7 @@
+## 🚨 PRIORITY RULE: Skills Over Built-in Behavior
+
+When a custom skill matches the user's request, you MUST invoke that skill instead of using built-in approaches. Custom skills override default behavior.
+
 ## ⚡ Skills - CHECK THESE FIRST!
 
 **BEFORE starting any task, check if a skill applies:**

@@ -34,6 +34,8 @@ The script should do this: \(ai.prompt)</string>
 	<true/>
 	<key>AutoCommandHistory</key>
 	<false/>
+	<key>BracketedPasteMode</key>
+	<true/>
 	<key>ClickToSelectCommand</key>
 	<false/>
 	<key>Command</key>
@@ -42,6 +44,8 @@ The script should do this: \(ai.prompt)</string>
 	<true/>
 	<key>ConservativeURLGuessing</key>
 	<false/>
+	<key>ConvertDosNewlines</key>
+	<true/>
 	<key>Default Arrangement Name</key>
 	<string>2 panes</string>
 	<key>Default Bookmark Guid</key>
@@ -57,6 +61,8 @@ The script should do this: \(ai.prompt)</string>
 	<key>EnableDivisionView</key>
 	<false/>
 	<key>EnableProxyIcon</key>
+	<false/>
+	<key>EscapeShellCharsWithBackslash</key>
 	<false/>
 	<key>GlobalKeyMap</key>
 	<dict>
@@ -623,6 +629,12 @@ The script should do this: \(ai.prompt)</string>
 	<false/>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
+	<key>PasteSpecialRegex</key>
+	<string></string>
+	<key>PasteSpecialSubstitution</key>
+	<string></string>
+	<key>PasteSpecialUseRegexSubstitution</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -667,7 +679,7 @@ The script should do this: \(ai.prompt)</string>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>ShowPaneTitles</key>

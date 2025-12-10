@@ -62,3 +62,7 @@ function npmInstallLatestAndCommit() {
 }
 
 alias src=". ~/.zshrc"
+
+# https://github.com/nvbn/thefuck
+# Install with `brew install thefuck`
+eval $(thefuck --alias)

@@ -163,7 +163,20 @@ Here's a complete example of the review process:
 
 **Note:** Do NOT include cleanup steps after review. Leave the PR branch checked out as-is.
 
-## 7. Best Practices
+## 7. Risk Assessment (Optional)
+
+For significant changes, consider performing a formal risk assessment using the **pull-request-risk-assessment** skill. This is especially relevant for:
+
+- Infrastructure changes (Docker, Consul, Terraform, etc.)
+- Database migrations
+- Changes affecting many customers
+- Changes that are hard to test or verify in staging
+
+To invoke: Use the Skill tool with `pull-request-risk-assessment`
+
+The risk assessment helps determine if special rollout/verification/rollback plans are needed per Lime's Change Management policy.
+
+## 8. Best Practices
 
 - **Focus on important issues first**, but nitpicking is expected too
 - **Mark nitpicks clearly**: Prefix with "Nitpick:" when appropriate
@@ -175,7 +188,7 @@ Here's a complete example of the review process:
 - **Distinguish severity**: Make it clear what's blocking vs. nice-to-have
 - **Be concise and to the point**: Clear, direct feedback is most useful
 
-## 8. Troubleshooting
+## 9. Troubleshooting
 
 **PR has merge conflicts:**
 
@@ -210,7 +223,7 @@ gh pr checkout <PR-number>
 - Don't assume - clarify with the author
 - It's better to ask than make wrong assumptions
 
-## 9. Repository Information
+## 10. Repository Information
 
 - **Organization:** `Lundalogik`
 - **Repo naming:** Usually matches folder name (e.g., `aws-bedrock-gateway`)

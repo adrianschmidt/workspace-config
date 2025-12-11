@@ -10,6 +10,7 @@ When a custom skill matches the user's request, you MUST invoke that skill inste
 |-------|----------|-----------------|
 | `pr-address-feedback` | Responding to PR review comments | "address feedback", "PR review", "review comments", "fixup commit" |
 | `pr-review-code` | Reviewing someone else's PR | "review PR", "review this PR", "look at this PR" |
+| `pull-request-risk-assessment` | Evaluating change risk per Change Management policy | "risk assessment", "assess risk", "evaluate risk", "change management" |
 | `generating-commit-messages` | Creating or improving commit messages | "commit message", "create commit", "amend commit", "fixup commit" |
 | `safe-file-operations` | Moving, deleting, or copying files | "move files", "delete files", "rm", "mv", "cp" |
 

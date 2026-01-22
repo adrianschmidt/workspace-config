@@ -19,7 +19,8 @@ alias ldaupdate="pip uninstall -y lime-core lime-webclient && pip install -r req
 alias ldaupdatewithcore="pip uninstall -y lime-core lime-webclient && pip install -r requirements.txt && pip install -e ../lime-core/ && pip install -e ../lime-webclient/"
 alias ldarunimport="celery worker --app lime_import.task.app -P solo"
 
-alias wcrun="poetry run flask run"
+alias wcrun="poetry run lime-webserver -x .lime/extra.py run dev"
+alias wcrunold="poetry run flask run"
 alias wcrundebug="FLASK_DEBUG=true poetry run flask run"
 alias wcrunimport="poetry run celery --app lime_import.task.app worker -P solo"
 

@@ -221,6 +221,7 @@ test -e ~/.iterm2_shell_integration.zsh && source ~/.iterm2_shell_integration.zs
 export JAVA_HOME="/opt/homebrew/opt/openjdk@21"
 export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 
 # Set the default GUI code editor to Cursor

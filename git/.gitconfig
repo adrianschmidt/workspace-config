@@ -46,7 +46,7 @@
 [core]
     excludesfile = ~/.gitignore_global # This is the global .gitignore file.
     pager = diff-so-fancy | less --tabs=4 -RFX
-    hooksPath = /Users/adrian.schmidt/.git-templates/hooks/
+    hooksPath = ~/.git-templates/hooks/
 [rebase]
     autosquash = true # Love this! When running an interactive rebase, it automatically moves commits made with `git commit --fixup` or `--squash` to the correct line, and marks them with `fixup` and `squash` respectively.
     missingCommitsCheck = error

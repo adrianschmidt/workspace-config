@@ -1,5 +1,7 @@
 alias gpip='PIP_REQUIRE_VIRTUALENV="" pip'
 
+# https://github.com/garabik/grc
+# brew install grc
 alias ll='grc ls -alFh'
 alias la='grc ls -Ah'
 alias l='grc ls -CFh'

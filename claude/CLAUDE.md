@@ -58,3 +58,7 @@ This approach provides:
 - Clear identification of trade-off decisions
 - Multiple perspectives on complex problems
 - Explicit risk assessment and innovation opportunities
+
+## Testing Stencil based components
+
+The jest command line flag `--testPathPattern` does not work as expected with StencilJS. For example, using the flag `--testPathPattern="info-tile"` will result in the following output: `Ran all test suites matching /i|n|f|o|-|t|i|l|e/i.`. Instead, either run all tests, or stop and ask the user to run the tests manually.

@@ -101,7 +101,5 @@ When writing commit messages:
 - "Using Option B approach as discussed"
 - "Removed oldFunction since we decided it wasn't needed"
 - ```
-  🤖 Generated with [Claude Code](https://claude.com/claude-code)
-
-  Co-Authored-By: Claude <noreply@anthropic.com>
+  Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
   ```

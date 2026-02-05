@@ -122,7 +122,7 @@ cd() {
     builtin cd "$@"
     if [ -f .nvmrc ]; then
         nvm use;
-        ~/update-node-symlink.sh
+        #~/update-node-symlink.sh
     fi
 }
 

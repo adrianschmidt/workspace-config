@@ -229,7 +229,3 @@ export VISUAL="cursor"
 export EDITOR="vim"
 # Set the default git editor to vim
 export GIT_EDITOR="vim"
-
-# https://github.com/nvbn/thefuck
-# Install with `brew install thefuck`
-eval $(thefuck --alias)

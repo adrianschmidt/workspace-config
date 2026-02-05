@@ -236,15 +236,15 @@ The script should do this: \(ai.prompt)</string>
 			<key>ASCII Ligatures</key>
 			<false/>
 			<key>AWDS Pane Directory</key>
-			<string>/Users/adrian.schmidt/src</string>
+			<string>~/src</string>
 			<key>AWDS Pane Option</key>
 			<string>Yes</string>
 			<key>AWDS Tab Directory</key>
-			<string>/Users/adrian.schmidt/src</string>
+			<string>~/src</string>
 			<key>AWDS Tab Option</key>
 			<string>Yes</string>
 			<key>AWDS Window Directory</key>
-			<string>/Users/adrian.schmidt/src</string>
+			<string>~/src</string>
 			<key>AWDS Window Option</key>
 			<string>Yes</string>
 			<key>Allow Title Setting</key>
@@ -624,7 +624,7 @@ The script should do this: \(ai.prompt)</string>
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/adrian.schmidt/src</string>
+			<string>~/src</string>
 		</dict>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
@@ -768,15 +768,15 @@ The script should do this: \(ai.prompt)</string>
 											<key>ASCII Ligatures</key>
 											<false/>
 											<key>AWDS Pane Directory</key>
-											<string>/Users/adrian.schmidt/src</string>
+											<string>~/src</string>
 											<key>AWDS Pane Option</key>
 											<string>Yes</string>
 											<key>AWDS Tab Directory</key>
-											<string>/Users/adrian.schmidt/src</string>
+											<string>~/src</string>
 											<key>AWDS Tab Option</key>
 											<string>Yes</string>
 											<key>AWDS Window Directory</key>
-											<string>/Users/adrian.schmidt/src</string>
+											<string>~/src</string>
 											<key>AWDS Window Option</key>
 											<string>Yes</string>
 											<key>Allow Title Setting</key>
@@ -1154,7 +1154,7 @@ The script should do this: \(ai.prompt)</string>
 											<key>Window Type</key>
 											<integer>0</integer>
 											<key>Working Directory</key>
-											<string>/Users/adrian.schmidt/src</string>
+											<string>~/src</string>
 										</dict>
 										<key>Columns</key>
 										<integer>92</integer>
@@ -1162,13 +1162,13 @@ The script should do this: \(ai.prompt)</string>
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/adrian.schmidt/src</string>
-											<string>/Users/adrian.schmidt/src</string>
+											<string>~/src</string>
+											<string>~/src</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/adrian.schmidt/src</string>
+											<string>~/src</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict>
@@ -1222,7 +1222,7 @@ The script should do this: \(ai.prompt)</string>
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/adrian.schmidt/src</string>
+										<string>~/src</string>
 										<key>Working Directory Poller Disabled</key>
 										<true/>
 									</dict>
@@ -1252,15 +1252,15 @@ The script should do this: \(ai.prompt)</string>
 											<key>ASCII Ligatures</key>
 											<false/>
 											<key>AWDS Pane Directory</key>
-											<string>/Users/adrian.schmidt/src</string>
+											<string>~/src</string>
 											<key>AWDS Pane Option</key>
 											<string>Yes</string>
 											<key>AWDS Tab Directory</key>
-											<string>/Users/adrian.schmidt/src</string>
+											<string>~/src</string>
 											<key>AWDS Tab Option</key>
 											<string>Yes</string>
 											<key>AWDS Window Directory</key>
-											<string>/Users/adrian.schmidt/src</string>
+											<string>~/src</string>
 											<key>AWDS Window Option</key>
 											<string>Yes</string>
 											<key>Allow Title Setting</key>
@@ -1638,7 +1638,7 @@ The script should do this: \(ai.prompt)</string>
 											<key>Window Type</key>
 											<integer>0</integer>
 											<key>Working Directory</key>
-											<string>/Users/adrian.schmidt/src</string>
+											<string>~/src</string>
 										</dict>
 										<key>Columns</key>
 										<integer>93</integer>
@@ -1646,13 +1646,13 @@ The script should do this: \(ai.prompt)</string>
 										<array/>
 										<key>Directories</key>
 										<array>
-											<string>/Users/adrian.schmidt/src</string>
-											<string>/Users/adrian.schmidt/src</string>
+											<string>~/src</string>
+											<string>~/src</string>
 										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/adrian.schmidt/src</string>
+											<string>~/src</string>
 										</dict>
 										<key>Hostname to Shell</key>
 										<dict>
@@ -1706,7 +1706,7 @@ The script should do this: \(ai.prompt)</string>
 											<string>$$</string>
 										</dict>
 										<key>Working Directory</key>
-										<string>/Users/adrian.schmidt/src</string>
+										<string>~/src</string>
 										<key>Working Directory Poller Disabled</key>
 										<true/>
 									</dict>

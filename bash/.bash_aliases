@@ -4,6 +4,8 @@ alias ll='grc ls -alFh'
 alias la='grc ls -Ah'
 alias l='grc ls -CFh'
 
+alias "c."="cursor ."
+
 alias d=docker
 alias dc="docker compose"
 alias dprune="d system prune --volumes -f"
@@ -25,6 +27,9 @@ alias wcrundebug="FLASK_DEBUG=true poetry run flask run"
 alias wcrunimport="poetry run celery --app lime_import.task.app worker -P solo"
 
 alias awsLogin="aws sso login --profile sharedecr"
+alias bedrockLogin="aws sso login --profile bedrock-dev"
+alias bedrockAPI="cd ~/src/aws-bedrock-gateway && npm run start-api"
+alias bedrockGateway="cd ~/src/aws-bedrock-gateway && NODE_TLS_REJECT_UNAUTHORIZED=0 AWS_PROFILE=bedrock-dev npm run ws:dev"
 
 alias lint="npm run lint"
 alias lintf="npm run lint:fix"
@@ -38,6 +43,8 @@ alias wcupdatepip="poetry run python -m pip install --upgrade pip"
 alias wcteardown="dc down && dprune && rm -rf .venv"
 alias wceventhandler="poetry run python .venv/bin/lime-event-handler"
 alias wctaskhandler="poetry run python .venv/bin/lime-task-handler"
+
+alias run_bedrock_gateway="cd ~/src/aws-bedrock-gateway && npm run start-api -- --profile bedrock-dev"
 
 alias nibb="npm i && npm run build && npm run build"
 
@@ -54,3 +61,8 @@ alias agPipUpdate='cd ~/src/autogen && docker-compose exec autogen pip install -
 alias agHaikuProxyStart='cd ~/src/autogen && with_anthropic_api_key docker-compose exec autogen litellm --model claude-3-haiku-20240307'
 alias agSonnetProxyStart='cd ~/src/autogen && with_anthropic_api_key docker-compose exec autogen litellm --model claude-3-sonnet-20240229 --port 4001'
 alias agOpusProxyStart='cd ~/src/autogen && with_anthropic_api_key docker-compose exec autogen litellm --model claude-3-opus-20240229 --port 4002'
+
+# OpenClaw related aliases
+
+alias ocRestartGateway='./docker-paranoid.sh down && ./docker-paranoid.sh up'
+alias ocRestartSandbox='docker stop $(docker ps --filter "name=sbx" -q) 2>/dev/null ./docker-paranoid.sh down && ./docker-paranoid.sh up'

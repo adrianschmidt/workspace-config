@@ -168,11 +168,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="/opt/homebrew/opt/git/bin:$PATH"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/adrian.schmidt/.rd/bin:$PATH"
+export PATH="~/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # Created by `pipx` on 2024-02-22 07:45:30
-export PATH="$PATH:/Users/adrian.schmidt/.local/bin"
+export PATH="$PATH:~/.local/bin"
 
 export PIPX_HOME=~/.local/pipx
 
@@ -192,14 +192,14 @@ eval "$(pyenv init -)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/adrian.schmidt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('~/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/adrian.schmidt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/adrian.schmidt/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "~/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "~/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/adrian.schmidt/miniconda3/bin:$PATH"
+        export PATH="~/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -216,7 +216,7 @@ get_conda_env() {
   #   echo "($env_name)"
   # fi
 }
-test -e /Users/adrian.schmidt/.iterm2_shell_integration.zsh && source /Users/adrian.schmidt/.iterm2_shell_integration.zsh || true
+test -e ~/.iterm2_shell_integration.zsh && source ~/.iterm2_shell_integration.zsh || true
 
 export JAVA_HOME="/opt/homebrew/opt/openjdk@21"
 export PATH="$JAVA_HOME/bin:$PATH"

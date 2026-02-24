@@ -13,6 +13,7 @@ When a custom skill matches the user's request, you MUST invoke that skill inste
 | `pull-request-risk-assessment` | Evaluating change risk per Change Management policy | "risk assessment", "assess risk", "evaluate risk", "change management" |
 | `generating-commit-messages` | Creating or improving commit messages | "commit message", "create commit", "amend commit", "fixup commit" |
 | `safe-file-operations` | Moving, deleting, or copying files | "move files", "delete files", "rm", "mv", "cp" |
+| `6-agent-review` | Deep multi-dimensional PR review | "6 agent review", "deep review", "comprehensive review", "multi-agent review" |
 
 **To use a skill:** Invoke the Skill tool with just the skill name (e.g., `Skill(skill: "pr-address-feedback")`)
 

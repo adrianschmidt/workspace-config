@@ -48,7 +48,7 @@ alias wctaskhandler="poetry run python .venv/bin/lime-task-handler"
 
 alias run_bedrock_gateway="cd ~/src/aws-bedrock-gateway && npm run start-api -- --profile bedrock-dev"
 
-alias nibb="npm i && npm run build && npm run build"
+alias nibb="with_githubtoken npm i && npm run build && npm run build"
 
 alias yrn="with_npmtoken with_githubtoken yarn" # Seriously, yarn can't even run `yarn -h` without these tokens 🤦‍♂️
 

@@ -30,7 +30,7 @@ alias wcrunimport="poetry run celery --app lime_import.task.app worker -P solo"
 
 alias awsLogin="aws sso login --profile sharedecr"
 alias bedrockLogin="aws sso login --profile bedrock-dev"
-alias bedrockAPI="cd ~/src/aws-bedrock-gateway && npm run start-api"
+alias bedrockAPI="cd ~/src/aws-bedrock-gateway && npm start"
 alias bedrockGateway="cd ~/src/aws-bedrock-gateway && NODE_TLS_REJECT_UNAUTHORIZED=0 AWS_PROFILE=bedrock-dev npm run ws:dev"
 
 alias lint="npm run lint"

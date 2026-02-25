@@ -118,14 +118,6 @@ fi
 
 # export PIP_REQUIRE_VIRTUALENV=true
 
-cd() {
-    builtin cd "$@"
-    if [ -f .nvmrc ]; then
-        nvm use;
-        #~/update-node-symlink.sh
-    fi
-}
-
 # --- BEGIN load alias definitions ---
 # You may want to put all your additions into a separate file like
 # ~/.zsh_aliases, instead of adding them here directly.
@@ -147,11 +139,6 @@ if [ -f ~/.zsh_functions ]; then
     . ~/.zsh_functions
 fi
 
-# Setup for `nvm` (node version manager)
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Enable zsh's tab completion system
 # Source: https://scriptingosx.com/2019/07/moving-to-zsh-part-5-completions/
 autoload -Uz compinit && compinit
@@ -167,12 +154,13 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Add the homebrew-installed git to the PATH
 export PATH="/opt/homebrew/opt/git/bin:$PATH"
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="~/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+# Setup for `fnm` (fast node manager)
+# NOTE: Must come after Homebrew PATH setup so fnm's PATH takes precedence
+eval "$(fnm env --use-on-cd)"
 
-# Created by `pipx` on 2024-02-22 07:45:30
-export PATH="$PATH:~/.local/bin"
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="$HOME/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 export PIPX_HOME=~/.local/pipx
 

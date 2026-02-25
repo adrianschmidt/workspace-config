@@ -25,6 +25,8 @@ Launch 6 `general-purpose` Task agents **in a single message** (so they run in p
 5. **Observability/Monitoring** — logging completeness, log levels, structured data, sensitive data in logs, error context, metrics, correlation
 6. **Performance** — render cycles, memory, GC pressure, algorithmic complexity, bundle size, cleanup, caching
 
+Note! Tell the agents to not write comments explaining what they are doing when they run commands. That makes it so that the user has to manually approve every single command, regardless of whether the command is already on the allow-list.
+
 ### Step 3: Synthesize into Consolidated Report
 
 Once all 6 agents return, synthesize their findings into the output format below. Do NOT just concatenate — deduplicate, cross-reference, and prioritize.

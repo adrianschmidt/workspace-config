@@ -12,7 +12,7 @@ Review a PR using 6 parallel sub-agents, each focused on a specific dimension, t
 
 ### Step 1: Fetch PR Details
 
-Use `gh pr view` and `gh pr diff` to get the PR metadata and full diff. All repos are in the `Lundalogik` organization.
+Use `gh pr view` and `gh pr diff` to get the PR metadata and full diff.
 
 ### Step 2: Spawn 6 Sub-Agents in Parallel
 
@@ -87,7 +87,7 @@ Use this exact structure:
 
 ## Top Recommendations
 
-<numbered list, most important first, max 7 items>
+<numbered list, most important first>
 ```
 
 ## Formatting Rules
@@ -97,5 +97,5 @@ Use this exact structure:
 - **Severity tags:** `[High]` = should fix before merge, `[Medium]` = should fix soon, `[Low]` = nice to have
 - **Positives:** Include a "Positives:" line in each section to acknowledge what's done well
 - **Findings:** Keep them concrete -- cite specific methods, files, or patterns
-- **Top Recommendations:** Actionable items, not just restating findings. Max 7.
+- **Top Recommendations:** Actionable items, not just restating findings.
 - **Deduplication:** If multiple agents flag the same issue, mention it once in the most relevant section and cross-reference if needed

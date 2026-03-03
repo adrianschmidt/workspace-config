@@ -22,7 +22,7 @@ Review a PR using 6 parallel sub-agents, each focused on a specific dimension, t
 
 ### Step 2: Spawn 6 Sub-Agents in Parallel
 
-Launch 6 `general-purpose` Task agents **in a single message** (so they run in parallel). Each agent receives:
+Launch 6 `general-purpose` Task agents **in a single message** (so they run in parallel), using `model: "opus"` for all 6. Each agent receives:
 - The **full diff** (the complete output of `gh pr diff`)
 - The **PR description/metadata**
 - The **worktree path** so they can explore the full codebase with Read, Grep, and Glob

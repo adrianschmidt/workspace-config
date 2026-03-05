@@ -8,13 +8,13 @@ When a custom skill matches the user's request, you MUST invoke that skill inste
 
 | Skill | Use When | Trigger Phrases |
 |-------|----------|-----------------|
+| `6-agent-review` | Deep multi-dimensional PR review | "6 agent review", "deep review", "comprehensive review", "multi-agent review" |
+| `generating-commit-messages` | Creating or improving commit messages | "commit message", "create commit", "amend commit", "fixup commit" |
+| `plan-review` | Reviewing implementation plans before execution | "review plan", "review this plan", "plan review", "check this plan" |
 | `pr-address-feedback` | Responding to PR review comments | "address feedback", "PR review", "review comments", "fixup commit" |
 | `pr-review-code` | Reviewing someone else's PR | "review PR", "review this PR", "look at this PR" |
 | `pull-request-risk-assessment` | Evaluating change risk per Change Management policy | "risk assessment", "assess risk", "evaluate risk", "change management" |
-| `generating-commit-messages` | Creating or improving commit messages | "commit message", "create commit", "amend commit", "fixup commit" |
 | `safe-file-operations` | Moving, deleting, or copying files | "move files", "delete files", "rm", "mv", "cp" |
-| `6-agent-review` | Deep multi-dimensional PR review | "6 agent review", "deep review", "comprehensive review", "multi-agent review" |
-| `plan-review` | Reviewing implementation plans before execution | "review plan", "review this plan", "plan review", "check this plan" |
 | `semantic-release` | Debugging semantic-release issues, inspecting release channels/git notes | "semantic-release", "release failed", "release channels", "git notes" |
 | `skill-creator` | Creating new skills, modifying and improving existing skills, running evals, benchmarking skill performance, and optimizing skill descriptions | "create skill", "modify skill", "improve skill", "benchmark skill", "optimize skill description" |
 

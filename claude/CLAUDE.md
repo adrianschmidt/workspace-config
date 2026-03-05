@@ -15,6 +15,7 @@ When a custom skill matches the user's request, you MUST invoke that skill inste
 | `safe-file-operations` | Moving, deleting, or copying files | "move files", "delete files", "rm", "mv", "cp" |
 | `6-agent-review` | Deep multi-dimensional PR review | "6 agent review", "deep review", "comprehensive review", "multi-agent review" |
 | `plan-review` | Reviewing implementation plans before execution | "review plan", "review this plan", "plan review", "check this plan" |
+| `semantic-release` | Debugging semantic-release issues, inspecting release channels/git notes | "semantic-release", "release failed", "release channels", "git notes" |
 
 **To use a skill:** Invoke the Skill tool with just the skill name (e.g., `Skill(skill: "pr-address-feedback")`)
 

@@ -16,6 +16,7 @@ When a custom skill matches the user's request, you MUST invoke that skill inste
 | `6-agent-review` | Deep multi-dimensional PR review | "6 agent review", "deep review", "comprehensive review", "multi-agent review" |
 | `plan-review` | Reviewing implementation plans before execution | "review plan", "review this plan", "plan review", "check this plan" |
 | `semantic-release` | Debugging semantic-release issues, inspecting release channels/git notes | "semantic-release", "release failed", "release channels", "git notes" |
+| `skill-creator` | Creating new skills, modifying and improving existing skills, running evals, benchmarking skill performance, and optimizing skill descriptions | "create skill", "modify skill", "improve skill", "benchmark skill", "optimize skill description" |
 
 **To use a skill:** Invoke the Skill tool with just the skill name (e.g., `Skill(skill: "pr-address-feedback")`)
 

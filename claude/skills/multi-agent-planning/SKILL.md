@@ -1,6 +1,7 @@
 ---
 name: multi-agent-planning
 description: Multi-perspective planning workflow that spawns radical, balanced, and conservative planning agents in parallel, then synthesizes their output. Use this skill whenever plan mode is active (you see the "Plan mode is active" system reminder). This skill and superpowers:writing-plans serve the same purpose — only one should be enabled at a time.
+disable-model-invocation: true
 ---
 
 # Multi-Agent Planning
